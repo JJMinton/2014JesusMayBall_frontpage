@@ -1,0 +1,167 @@
+div {
+	min-width: 10px;
+	min-height: 10px;
+}
+
+body{
+	background:#000;
+}
+
+#bodydiv {
+	background:#000;
+	height: 670px;
+	width: 12600px;
+	overflow-x: scroll;
+	overflow-y: hidden;
+	display: block-inline;
+	margin: 0px
+}
+
+.page {
+	float: left;
+	overflow: hidden;
+	width: 770px;
+	height: 570px;
+	background: #000;
+	display: block;
+	margin-top: 20px;
+	padding: 15px;
+	background-color: #EEE;
+	background-image:url('media/background.jpg');
+	background-size: 100% 100%;
+}
+
+.strip {
+	top: 0px;
+	height: 100%;
+	overflow: hidden;
+	position: absolute;
+	background-color: transparent;
+	pointer-events: none;
+}
+
+#pages {
+	z-index: 0;
+	display: inline-block;
+}
+
+#background{
+	width: 9300px; // 10000px/(1-0.3)+1800+500
+	height: 100%;
+	z-index: -1;
+	display: block;
+	float: left;
+	background-image: url('BackgroundImage/background.jpg');
+	background-size: auto 100%;
+}
+
+.screen{
+	top: 0px;
+	height: 100%;
+	overflow: hidden;
+	background-color: transparent;
+    float: left;
+    position: absolute;
+    display: block;
+    font-size: 0px;
+}
+
+.screenlayer1{
+	width: 3200px;
+	z-index: 1;
+}
+.screenlayer2{
+	width: 5000px;
+	z-index: 2;
+}
+.screenlayer3{
+	width: 8600px;
+	z-index: 3;
+}
+
+.atree{
+	height: 100%;
+	display: inline-block;
+}
+.atree.layer0{
+	width: 15px;
+	background-color: #802D2D;
+}
+.atree.layer1{
+	width: 40px;
+	background-color: #F00;
+}
+.atree.layer2{
+	width: 80px;
+	background-color: #00F;
+}
+.atree.layer3{
+	width: 150px;
+	background-color: #0F0;
+}
+
+.agap{
+	height: 100%;
+	background-color: transparent;
+	pointer-events: none;
+	display: inline-block;
+}
+.agap.layer1{
+	width: 80px;
+}
+.agap.layer1{
+	width: 120px;
+}
+.agap.layer2{
+	width: 500px;
+}
+.agap.layer3{
+	width: 1500px;
+}
+
+
+
+#left {
+	float: left;
+	margin-left: 10px
+}
+
+#center{
+	float: left;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#right{
+	float: right;
+	text-align: right;
+	margin-right: 10px;
+}
+
+.two-column {
+	width: 350px
+}
+
+.three-column {
+	width: 250px
+}
+
+div#footer_wrapper {
+	z-index: 10;
+    width: 100%;
+	text-align:center;
+    background-color: transparent;
+    color: #FFF;
+    position: fixed;
+    bottom: 10px;
+}
+
+div#floating-menu {
+	background-color: #CCF;
+}
+
+a.floating-menu-link {
+	padding: 5px 20px;
+	margin: 30px 0px;
+}
