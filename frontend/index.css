@@ -7,7 +7,9 @@ div {
 
 body{
 	background:#000;
-	background-image:url('http://static.panoramio.com/photos/original/97825963.jpg');	background-size: 3000px Auto;	overflow: hidden;
+//	background-image:url('media/Aspen.jpg');
+//	background-size: 3000px Auto;
+	overflow: hidden;
 }
 
 
@@ -63,7 +65,7 @@ body{
 	z-index: -1;
 	display: block;
 	float: left;
-	background-image: url('BackgroundImage/background.jpg');
+	background-image: url('media/Aspen.jpg');
 	background-size: auto 100%;
 }
 
