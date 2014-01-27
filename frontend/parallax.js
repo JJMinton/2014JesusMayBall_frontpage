@@ -1,4 +1,5 @@
 	var pageInfo;
+	var pageTarget;
 	
 	function Page(){
 		var start = 0;
@@ -33,8 +34,11 @@
 		}
 		$("#pages").css('width', counter +"px");
 		
-		//TODO: Call these routines better
+		
 		updateTrees();
+		$("body").scrollLeft(pageInfo[2].start);
+		pageTarget = (pageInfo[0].finish + pageInfo[0].start - $(window).width())/2;
+		$("body").animate({scrollLeft: pageTarget}, 2500);
 		
 		
 
@@ -50,21 +54,17 @@
 			e.preventDefault();
 			scrollToPage(3);
 		});
-		$("#sponsor-link").click(function(e){
+		$("#staffing-link").click(function(e){
 			e.preventDefault();
 			scrollToPage(4);
 		});
-		$("#staffing-link").click(function(e){
+		$("#entertainment-link").click(function(e){
 			e.preventDefault();
 			scrollToPage(5);
 		});
-		$("#entertainment-link").click(function(e){
-			e.preventDefault();
-			scrollToPage(6);
-		});
 		$("#committee-link").click(function(e){
 			e.preventDefault();
-			scrollToPage(7);
+			scrollToPage(6);
 		});
 		$("#logo-link-home").click(function(e){
 			e.preventDefault();
@@ -78,21 +78,17 @@
 			e.preventDefault();
 			scrollToPage(3);
 		});
-		$("#sponsor-link-home").click(function(e){
+		$("#staffing-link-home").click(function(e){
 			e.preventDefault();
 			scrollToPage(4);
 		});
-		$("#staffing-link-home").click(function(e){
+		$("#entertainment-link-home").click(function(e){
 			e.preventDefault();
 			scrollToPage(5);
 		});
-		$("#entertainment-link-home").click(function(e){
-			e.preventDefault();
-			scrollToPage(6);
-		});
 		$("#committee-link-home").click(function(e){
 			e.preventDefault();
-			scrollToPage(7);
+			scrollToPage(6);
 		});
 				
 		window.addEventListener('scroll', function(event) {
@@ -101,14 +97,13 @@
 
 		var interval;
 		window.addEventListener("keydown", function(event) {
-			$("body").stop(true,true);
 			if (event.which == 33 || event.which == 38) {
 				//page up/up arrow
-				scrollToPage(detectPage()+1);
+				scrollToPage(detectPage(pageTarget)+1);
 				event.preventDefault()
 			} else if(event.which == 34 || event.which == 40){
 				//page down/down arrow
-				scrollToPage(detectPage()-1);
+				scrollToPage(detectPage(pageTarget)-1);
 				event.preventDefault()
 			} else if(event.which == 35){
 				//end
@@ -144,10 +139,10 @@
 		
 		//Scrolling - scrolling package breaks on Mica's and Emma's laptops
 		//TODO: find cross compatibility solution
-		$("body").mousewheel(function(event, delta) {
-			this.scrollLeft -= (delta * 40);
-			event.preventDefault();
-		});		
+		//$("body").mousewheel(function(event, delta) {
+		//	this.scrollLeft -= (delta * 40);
+		//	event.preventDefault();
+		//});		
 		
 	});
 	
@@ -194,14 +189,7 @@
 				moveTree($('#treep6l3l'),9, $("body").scrollLeft(), 6, true);
 				moveTree($('#treep6l1r'),3, $("body").scrollLeft(), 6, false);
 				moveTree($('#treep6l2r'),5, $("body").scrollLeft(), 6, false);
-				moveTree($('#treep6l3r'),9, $("body").scrollLeft(), 6, false);
-				
-				moveTree($('#treep7l1l'),3, $("body").scrollLeft(), 7, true);
-				moveTree($('#treep7l2l'),5, $("body").scrollLeft(), 7, true);
-				moveTree($('#treep7l3l'),9, $("body").scrollLeft(), 7, true);
-				moveTree($('#treep7l1r'),3, $("body").scrollLeft(), 7, false);
-				moveTree($('#treep7l2r'),5, $("body").scrollLeft(), 7, false);
-				moveTree($('#treep7l3r'),9, $("body").scrollLeft(), 7, false);		
+				moveTree($('#treep6l3r'),9, $("body").scrollLeft(), 6, false);	
 	}
 	
 	function moveTree(tree, treePositionMultiplier, pagePosition, page, left){
@@ -226,18 +214,23 @@
 		
 	}
 	
-	function scrollToPage(pageNumber){		
+	function scrollToPage(pageNumber){
+		$("body").stop(true,false);
 		if(pageNumber > pageInfo.length){
 			pageNumber = pageInfo.length;
 		}else if(pageNumber < 1){
 			pageNumber = 1;
 		}
-		$("body").animate({scrollLeft: (pageInfo[pageNumber-1].finish + pageInfo[pageNumber-1].start - $(window).width())/2}, 1500);
+		pageTarget = (pageInfo[pageNumber-1].finish + pageInfo[pageNumber-1].start - $(window).width())/2;
+		$("body").animate({scrollLeft: pageTarget}, 1500);
+		
 	};
 	
 	
-	function detectPage(){
-		var position = $("body").scrollLeft();
+	function detectPage(position){
+		if(!position){
+			position = $("body").scrollLeft();
+		}
 		for(i=0; i<pageInfo.length; i++){
 			if(position < pageInfo[i].finish){
 				return i+1; //page number vs index
