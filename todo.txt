@@ -1,0 +1,10 @@
+Page content
+More trees and tree layout
+Mobile/small screen site
+Mouse scroll/navigate with arrows instructions
+Shrubs
+Better looking bottom menu (cloud/mist)
+Limit page width
+Check cross browser compatability
+More pretty things (shadows from trees and shrubs?)
+

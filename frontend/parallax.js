@@ -97,11 +97,11 @@
 
 		var interval;
 		window.addEventListener("keydown", function(event) {
-			if (event.which == 33 || event.which == 38) {
+			if (event.which == 33 || event.which == 40) {
 				//page up/up arrow
 				scrollToPage(detectPage(pageTarget)+1);
 				event.preventDefault()
-			} else if(event.which == 34 || event.which == 40){
+			} else if(event.which == 34 || event.which == 38){
 				//page down/down arrow
 				scrollToPage(detectPage(pageTarget)-1);
 				event.preventDefault()
