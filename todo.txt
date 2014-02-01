@@ -10,3 +10,4 @@ Limit page width
 Check cross browser compatability
 More pretty things (shadows from trees and shrubs?)
 
+Swap page up and page down buttons (wrong way around)
