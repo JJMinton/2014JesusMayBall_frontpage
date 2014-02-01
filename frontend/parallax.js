@@ -90,6 +90,10 @@
 			e.preventDefault();
 			scrollToPage(6);
 		});
+		$("#ticketLinkToCharity").click(function(e){
+			e.preventDefault();
+			scrollToPage(3);
+		});
 				
 		window.addEventListener('scroll', function(event) {
 			updateTrees();

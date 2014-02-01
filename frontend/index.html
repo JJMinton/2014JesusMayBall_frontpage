@@ -14,10 +14,28 @@
 </head>
 
 <body>
+<?php
+function treeProperties($meanLeft, $varLeft, $meanWidth, $varWidth, $total){
+	$left = rand(($meanLeft - $varLeft)/2, ($meanLeft + $varLeft)/2);
+	$width = rand($meanWidth - $varWidth)/2, ($meanWidth + $varWidth)/2);
+	$right = $total - $left - $width;
+	echo 'style=/"margin-left:'.$left.'px; width='.$width.'px; margin-right:'.$right.'px;"/"';
+}
+
+function groveOfTrees($width, $adjustLeft, $adjustRight, $numTrees, $treeWidth, $treeVar, $margVar){
+	$total = ($width - $adjustLeft - $adjustRight)/($numTrees -1);
+	$meanLeft = $total/2 - ($meanWidth)/2;
+	treeProperties($adjustLeft, $margVar, $treeWidth, $treeVar, $total/2 + $adjustLeft);
+	for($i = 2; $i < $trees; $i++){
+		treeProperties($meanLeft, $margVar, $treeWidth, $treeVar, $total);
+	}
+	treeProperties($meanLeft, $margVar, $treeWidth, $treeVar, $total/2 + $adjustRight);
+}
+?>
 	<div id"bodydiv">
 	<div id="treep1l1l" class="screen screenlayer1">
 		<?php for($i = 1; $i <= 10; $i++){ ?>
-		<div class="atree layer1"></div><div class="agap layer1"></div>		
+		<div class="atree layer1" <?php groveOfTrees(1000, 100, 100, 6, 80, 5, 80) ?>></div><div class="agap layer1"></div>
 		<?}?>
 	</div><div id="treep1l1r" class="screen screenlayer1">
 		<div class="agap layer1"></div>
@@ -224,33 +242,36 @@
 
 		<div class="page">
 			<h1>Tickets</h1>
+			<div class="columns">
 			<div id="left" class="two-column">
-				<p>Tickets will be available for Jesus College students from the 10th February, for a week before general release.</p>
-				<p>Each student may only buy up to five tickets.</p>
+				<p>Tickets will be available for Jesus College students from the 20th of February, for a week before general release on the 27th of February.</p>
+				<p>Each student may buy up to five tickets (i.e. themselves and four guests).</p>
 				<h4>General Release</h4>
-				<p>9pm</p>
-				<p>17/02/2013</p>
+				<p class="snug">9pm</p>
+				<p class="snug">27/02/2014</p>
 				<h4>Reserve Tickets Now</h4>
-				<p>Reserve tickets now and pay via bank transfer.</p>
-				<p>* Sorry, all tickets are now sold out. If you are still interested, please add your name to the waiting list. The waiting list is only open to Jesuans until general release, when it is opened to everyone.</p>
-				<p>[<a href="tickets/reserve.php">Waiting List</a>]</p>
+				<p class="snug">Reserve tickets now and pay via bank transfer.</p>
+				<!--<p>* Sorry, all tickets are now sold out. If you are still interested, please add your name to the waiting list. The waiting list is only open to Jesuans until general release, when it is opened to everyone.</p>
+				<p>[<a href="tickets/reserve.php">Waiting List</a>]</p>-->
 			</div>
 			<div id="right" class="two-column">
 				<h4>Standard</h4>
 				<p class="snug">- £123 + £2 -</p>
-				<p class="snug">(SOLD OUT)</p>
-				<p>Enjoy unlimited food drinks and entertainment!</p>
+				<!--<p class="snug">(SOLD OUT)</p>-->
+				<p class="snug">Enjoy unlimited food drinks and entertainment!</p>
 				<h4>Priority</h4>
 				<p class="snug">- £139 + £2 -</p>
-				<p class="snug">(SOLD OUT)</p>
-				<p>Take advantage of early entry and jump the queue!</p>
+				<!--<p class="snug">(SOLD OUT)</p>-->
+				<p class="snug">Take advantage of early entry and jump the queue!</p>
 				<h4>Dining</h4>
 				<p class="snug">- £159 + £2 -</p>
-				<p class="snug">(SOLD OUT)</p>
-				<p>Indulge in a champagne reception and a three course meal in Jesus Hall!</p>
+				<!--<p class="snug">(SOLD OUT)</p>-->
+				<p class="snug">Indulge in a champagne reception and a three course meal in Jesus Hall!</p>
 				<br />
-				<p>All tickets are sold with an optional £2 charitable donation. Please see our <a href="charity.php">charities page</a> for more information.</p>
+				<p>All tickets are sold with an optional £2 charitable donation. Please see our <a id="ticketLinkToCharity" href="">charities page</a> for more information.</p>
 			</div>
+			</div>
+			<div id="header-link"><h1><a>Reserve your tickets here</a></h1></div>
 		</div>
 
 		<div class="page">
@@ -279,6 +300,7 @@
 
 		<div class="page">
 			<h1>Staffing - Jesus College May Ball 2014</h1>
+			<div class="columns">
 			<div id="left" class="two-column">
 				<h4>Staffing</h4>
 				<p>Want to make money in May Week and be part of a great event, working in a team? </p>
@@ -290,15 +312,19 @@
 				<h4>Applications</h4>
 				<p>Apply with a group of friends and we will try and ensure that you are put together. If you're interested, online applications for all staffing posts are now open!</p>
 				<p>Hurry, the application deadline has been brought forward to Sunday 24th February.</p>
-				<p>[Sorry, Applications are now closed]</p>
+				<!--<p>[Sorry, Applications have not yet opened. Please come back soon.]</p>
+				<p>[Sorry, Applications are now closed]</p>-->
 			</div>
+			</div>
+			<div class="header-link"><h1><a href="www.jesusmayball.com/staff">Apply here</a></h1></div>
 		</div>
 
 		<div class="page">
 				<h1>Entertainment Auditions</h1>
-				<p>The ents team is currently holding auditions on the 23rd February.</p>
+				<p>The ents team is currently holding auditions on the 2nd and 9th of March.</p>
 				<p>If you cannot attend any of the timetabled audition slots, you may still submit your act for consideration.</p>
-				<p>[<a href="/ents/" >Auditions Form</a>]</p>
+				<!--<p>[Sorry, auditions are now closed.]</p>-->
+				<div class="header-link"><h1><a href="">Register for an audition here.</a></h1></div>
 		</div>
 		
 		<div class="page">
@@ -360,7 +386,7 @@
 				<a class="floating-menu-link" id="entertainment-link" href="">Entertaiment</a>				
 				<a class="floating-menu-link" id="committee-link" href="">Committee</a>
 			</div>
-			<div id="footer_message">&copy; Jesus May Ball 2014</div>
+			<div id="footer_message">Jesus May Ball 2014</div>
 		</div>
 	</div>
 </body>

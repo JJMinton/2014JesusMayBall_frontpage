@@ -4,16 +4,10 @@ div {
 	display: block;
 }
 
-
-
 body{
 	background:#000;
-//	background-image:url('media/Aspen.jpg');
-//	background-size: 3000px Auto;
 	overflow-y: hidden;
 }
-
-
 
 #bodydiv {
 	background:#000;
@@ -25,25 +19,20 @@ body{
 	margin: 0px
 }
 
-
-
 .page {
 	float: left;
 	overflow: hidden;
 	width: 770px;
 	height: 570px;
-	background: #000;
 	display: block;
 	margin-top: 20px;
 	padding: 15px;
-	opacity: 0.8;
-	background-size: 100% 100%;
+	background: rgb(0,0,5);
+	background: rgba(0,0,5,.8);
 	border-radius: 15px;
 	color: white;
 	font-family: Georgia, serif;
 }
-
-
 
 .strip {
 	top: 0px;
@@ -57,8 +46,6 @@ body{
 	z-index: 0;
 	display: inline-block;
 }
-
-
 
 #background{
 	width: 9300px; // 10000px/(1-0.3)+1800+500
@@ -78,118 +65,56 @@ body{
 	height: 100%;
 	overflow: hidden;
 	background-color: transparent;
-    float: left;
-    position: absolute;
-    display: block;
-    font-size: 0px;
+	float: left;
+	position: absolute;
+	display: block;
+	font-size: 0px;
 }
-
-
-
 .screenlayer1{
 	width: 3200px;
 	z-index: 1;
 }
-
-
 .screenlayer2{
 	width: 5000px;
 	z-index: 2;
 }
-
-
 .screenlayer3{
 	width: 8600px;
 	z-index: 3;
 }
 
-
-
 .atree{
 	height: 100%;
-	display: inline-block; 
+	top: 0px
+	display: inline-block;
+	background-size: 100%; 
 }
 
-
-.atree.layer0{
-	width: 600px;
-	background-image: url('media/tree01.png');
-}
-.atree.layer1{
-	width: 600px;
-	background-image: url('media/tree01.png');
-	
-}
-.atree.layer2{
-	width: 600px;
-	background-image: url('media/tree01.png');
-}
-.atree.layer3{
-	width: 600px;
-	background-image: url('media/tree01.png');
-}
-
-
-
-.agap{
+.stretch{
+	width: 100%;
 	height: 100%;
-	background-color: transparent;
-	pointer-events: none;
+}
+
+.columns {
 	display: inline-block;
 }
-
-.agap.layer1{
-width: 80px;
-}
-.agap.layer1{
-width: 120px;
-}
-
-
-.agap.layer2{
-width: 500px;
-}
-
-
-.agap.layer3{
-	width: 1500px;
-}
-
-
-
-
-
 #left {
 	float: left;
 	margin-left: 10px
 }
-
-
-
 #center{
 	float: left;
-//	text-align: center;
 	margin-left: auto;
 	margin-right: auto;
 }
-
-
-
 #right{
 	float: right;
-//	text-align: right;
 	margin-right: 10px;
 }
-
-
-
 .two-column {
 	width: 350px;
 	text-align: center;
 }
-
-
-
 .three-column {
 	width: 250px;
 	text-align: "center";
@@ -199,26 +124,34 @@ div#footer_wrapper {
 	z-index: 10;
 	width: 100%;
 	text-align:center;
-    background-color: transparent;
-    color: #FFF;
-    position: fixed;
+	background: rgb(200,200,255);
+	background: rgba(200,200,255,0.8);
+	position: fixed;
 	left: 0px;
     bottom: 10px;
 }
-
-
-
 div#floating-menu {
-	background-color: #EEF;
-	opacity: 0.8;
 	padding: 5px;	
 }
+#footer_message {
+	color: #000;
+}
 
-
-
-a.floating-menu-link {
+.floating-menu-link {
 	padding: 5px 20px;
 	margin: 30px 0px;
+}
+.floating-menu-link:link {
+	color: #1111AA;
+	text-decoration: none;
+}
+.floating-menu-link:visited {
+	color: #0000AA;	
+	text-decoration: none;
+}
+.floating-menu-link:hover {
+	color: #2222AA;
+	text-decoration: underline;
 }
 
 .charity-logo {
@@ -232,4 +165,50 @@ a.floating-menu-link {
 img {
 	height: 100%;
 	display: inline;
+}
+
+a{
+	color: #8888FF;
+	text-decoration: none;
+}
+a:visited{
+	color: #7777FF;
+	text-decoration: none;
+}
+a:hover{
+	color: #DDDDFF;
+	text-decoration: underline;
+}
+
+.header-link {
+	width: 100%;
+	float: center;
+	display: block;
+}
+
+h1 {
+	display: block;
+	text-align: center;
+}
+
+.title {
+	color: #000066;
+}
+h4 {
+	color: #000066;
+	margin: 5px;
+	margin-top: 15px;
+}
+
+p.snug{
+	margin: 2px;
+}
+
+.logo{
+	height: 500px;
+	margin: auto;
+	text-align: center;
+	vertical-align: middle;	
+	opacity: 1.0;
+	display: table-cell;
 }
