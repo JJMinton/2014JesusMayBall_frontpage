@@ -1,13 +1,18 @@
+Fix Trees
 Titles and links with new font
-Logo and display colours
-Page content
-More trees and tree layout
-Mobile/small screen site
-Mouse scroll/navigate with arrows instructions
-Shrubs
-Better looking bottom menu (cloud/mist)
-Limit page width
+
+Calibrate trees for smaller page/make trees permanent
+
+Construct small screen site
+Construct mobile site
+
 Check cross browser compatability
+
+Splash animation
+Highlight current page
+
+Better looking bottom menu (cloud/mist)
 More pretty things (shadows from trees and shrubs?)
 
-Swap page up and page down buttons (wrong way around)
+
+

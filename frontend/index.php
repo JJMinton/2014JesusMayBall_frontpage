@@ -9,211 +9,188 @@
 	<script src="parallax.js" type="text/javascript"></script>
 </head>
 
-<body>
+<body onload="init()">
+	<div id="splash" class="bodydiv" style="visibility: visible;">
+		<div id="loading">
+			<img id="splashImage" src="media/logo.png" class="logo" alt="Loading..." />
+			<h1 class="splash">Loading...</h1>
+		</div>
+	</div>
+
+	<div id="mobile" class="mobileBody">
+		<div id="loading">
+			<h1 class="splash">Mobile Screen</h1>
+		</div>
+	</div>
+	
+	<div id="small" class="smallBody">
+		<div id="loading">
+			<h1 class="splash">Small Screen</h1>
+		</div>
+	</div>	
+	
 <?php
 ini_set('display_errors', 'On');
 error_reporting(E_ALL);
 function treeProperties($tree, $meanLeft, $varLeft, $meanWidth, $varWidth, $total){
 	$images = array('media//tree01.png','media//tree02.png','media//tree03.png','media//tree04.png','media//tree05.png');
-
-	$left = rand(($meanLeft - $varLeft)/2, ($meanLeft + $varLeft)/2);
-	$width = rand(($meanWidth - $varWidth)/2, ($meanWidth + $varWidth)/2);
+	$left = rand($meanLeft - $varLeft/2, $meanLeft + $varLeft/2);
+	$width = rand($meanWidth - $varWidth/2, $meanWidth + $varWidth/2);
 	$right = $total - $left - $width;
 	echo '<div class="' . $tree . '" style="margin-left:'.$left.'px; width:'.$width.'px; margin-right:'.$right.'px;"><img src="media/tree0'.rand(1,5).'.png" class="stretch" alt="" /></div>';
 }
 
 function groveOfTrees($tree, $width, $adjustLeft, $adjustRight, $numTrees, $treeWidth, $treeVar, $margVar){
-	$total = ($width - $adjustLeft - $adjustRight)/($numTrees -1);
-	$meanLeft = $total/2 - ($treeWidth)/2;
-	treeProperties($tree, $adjustLeft, $margVar, $treeWidth, $treeVar, $total/2 + $adjustLeft);
-	for($i = 2; $i < $numTrees; $i++){
-		treeProperties($tree, $meanLeft, $margVar, $treeWidth, $treeVar, $total);
+	if($numTrees < 2){
+		treeProperties($tree, $adjustLeft + ($width-$adjustLeft-$adjustRight)/2, $margVar, $treeWidth, $treeVar, $width);
+	}else{
+		$total = ($width - $adjustLeft - $adjustRight)/($numTrees -1);
+		$meanLeft = $total/2 - ($treeWidth)/2;
+		treeProperties($tree, $adjustLeft, $margVar, $treeWidth, $treeVar, $total/2 + $adjustLeft);
+		for($i = 2; $i < $numTrees; $i++){
+			treeProperties($tree, $meanLeft, $margVar, $treeWidth, $treeVar, $total);
+		}
+		treeProperties($tree, $meanLeft, $margVar, $treeWidth, $treeVar, $total/2 + $adjustRight);
 	}
-	treeProperties($tree, $meanLeft, $margVar, $treeWidth, $treeVar, $total/2 + $adjustRight);
 }
 ?>
-	<div id"bodydiv">
+<div id="site" class="bodydiv" style="visibility: hidden;">
 	<div id="treep1l1l" class="screen screenlayer1">
-		<?php groveOfTrees("atree", 3200, 300, 300, 14, 120, 30, 300); ?>
-	</div><div id="treep1l1r" class="screen screenlayer1">
-		<?php groveOfTrees("atree", 3200, 300, 300, 13, 120, 30, 300); ?>
+		<?php groveOfTrees("atree", 2400, 40, 350, 3, 80, 15, 300); ?>
+		<?php groveOfTrees("atree", 6280, 1020, 350, 7, 80, 15, 300); ?>
+		<?php groveOfTrees("atree", 6280, 1020, 350, 7, 80, 15, 300); ?>
+		<?php groveOfTrees("atree", 6280, 1020, 350, 6, 80, 15, 300); ?>
+		<?php groveOfTrees("atree", 6280, 1020, 350, 6, 80, 15, 300); ?>
+		<?php groveOfTrees("atree", 6280, 1020, 350, 7, 80, 15, 300); ?>
+		<?php groveOfTrees("atree", 2495, 1020, 40, 3, 80, 15, 300); ?>
 	</div><div id="treep1l2l" class="screen screenlayer2">
-		<?php groveOfTrees("atree", 3200, 300, 300, 7, 200, 65, 300); ?>
-	</div><div id="treep1l2r" class="screen screenlayer2">
-		<?php groveOfTrees("atree", 3200, 300, 300, 8, 200, 65, 300); ?>
+		<?php groveOfTrees("atree", 3600, 40, 450, 1, 120, 23, 400); ?>
+		<?php groveOfTrees("atree", 9420, 1120, 450, 3, 120, 23, 400); ?>
+		<?php groveOfTrees("atree", 9420, 1120, 450, 2, 120, 23, 400); ?>
+		<?php groveOfTrees("atree", 9420, 1120, 450, 2, 120, 23, 400); ?>
+		<?php groveOfTrees("atree", 9420, 1120, 450, 3, 120, 23, 400); ?>
+		<?php groveOfTrees("atree", 9420, 1120, 450, 2, 120, 23, 400); ?>
+		<?php groveOfTrees("atree", 3743, 1120, 40, 1, 120, 23, 400); ?>
 	</div><div id="treep1l3l" class="screen screenlayer3">
-		<?php groveOfTrees("atree", 3200, 300, 300, 2, 450, 100, 300); ?>
-	</div><div id="treep1l3r" class="screen screenlayer3">
-		<?php groveOfTrees("atree layer3", 3200, 300, 300, 3, 450, 100, 300); ?>
+		<?php //groveOfTrees("atree", 7800, 40, 100, 6, 80, 15, 0); ?>
+		<?php groveOfTrees("atree", 20410, 1370, 600, 2, 170, 100, 800); ?>
+		<?php groveOfTrees("atree", 20410, 1370, 600, 1, 170, 100, 800); ?>
+		<?php groveOfTrees("atree", 20410, 1370, 600, 1, 170, 100, 800); ?>
+		<?php groveOfTrees("atree", 20410, 1370, 600, 2, 170, 100, 800); ?>
+		<?php groveOfTrees("atree", 20410, 1370, 600, 1, 170, 100, 800); ?>
+		<?php groveOfTrees("atree", 8109, 1370, 40, 1, 170, 100, 800); ?>
 	</div>
-
-	<div id="treep2l1l" class="screen screenlayer1">
-		<?php groveOfTrees("atree", 3200, 300, 300, 7, 360, 30, 300); ?>
-	</div><div id="treep2l1r" class="screen screenlayer1">
-		<?php groveOfTrees("atree", 3200, 300, 300, 8, 360, 30, 300); ?>
-	</div><div id="treep2l2l" class="screen screenlayer2">
-		<?php groveOfTrees("atree", 3200, 300, 300, 3, 500, 65, 300); ?>
-	</div><div id="treep2l2r" class="screen screenlayer2">
-		<?php groveOfTrees("atree", 3200, 300, 300, 3, 500, 65, 300); ?>
-	</div><div id="treep2l3l" class="screen screenlayer3">
-		<?php groveOfTrees("atree", 3200, 300, 300, 2, 800, 100, 300); ?>
-	</div><div id="treep2l3r" class="screen screenlayer3">
-		<?php groveOfTrees("atree", 3200, 300, 300, 1, 800, 100, 300); ?>
-	</div>
-	
-	<div id="treep3l1l" class="screen screenlayer1">
-		<?php groveOfTrees("atree", 3200, 300, 300, 14, 120, 30, 300); ?>
-	</div><div id="treep3l1r" class="screen screenlayer1">
-		<?php groveOfTrees("atree", 3200, 300, 300, 14, 120, 30, 300); ?>
-	</div><div id="treep3l2l" class="screen screenlayer2">
-		<?php groveOfTrees("atree", 3200, 300, 300, 8, 200, 65, 300); ?>
-	</div><div id="treep3l2r" class="screen screenlayer2">
-		<?php groveOfTrees("atree", 3200, 300, 300, 8, 200, 65, 300); ?>
-	</div><div id="treep3l3l" class="screen screenlayer3">
-		<?php groveOfTrees("atree", 3200, 300, 300, 2, 450, 100, 300); ?>
-	</div><div id="treep3l3r" class="screen screenlayer3">
-		<?php groveOfTrees("atree", 3200, 300, 300, 3, 450, 100, 300); ?>
-	</div>
-	
-	<div id="treep4l1l" class="screen screenlayer1">
-		<?php groveOfTrees("atree", 3200, 300, 300, 15, 80, 15, 300); ?>
-	</div><div id="treep4l1r" class="screen screenlayer1">
-		<?php groveOfTrees("atree", 3200, 300, 300, 13, 80, 15, 300); ?>
-	</div><div id="treep4l2l" class="screen screenlayer2">
-		<?php groveOfTrees("atree", 3200, 300, 300, 7, 80, 15, 300); ?>
-	</div><div id="treep4l2r" class="screen screenlayer2">
-		<?php groveOfTrees("atree", 3200, 300, 300, 7, 80, 15, 300); ?>
-	</div><div id="treep4l3l" class="screen screenlayer3">
-		<?php groveOfTrees("atree", 3200, 300, 300, 2, 80, 15, 300); ?>
-	</div><div id="treep4l3r" class="screen screenlayer3">
-		<?php groveOfTrees("atree", 3200, 300, 300, 2, 80, 15, 300); ?>
-	</div>
-	
-	<div id="treep5l1l" class="screen screenlayer1">
-		<?php groveOfTrees("atree", 3200, 300, 300, 14, 80, 15, 300); ?>
-	</div><div id="treep5l1r" class="screen screenlayer1">
-		<?php groveOfTrees("atree", 3200, 300, 300, 14, 80, 15, 300); ?>
-	</div><div id="treep5l2l" class="screen screenlayer2">
-		<?php groveOfTrees("atree", 3200, 300, 300, 8, 80, 15, 300); ?>
-	</div><div id="treep5l2r" class="screen screenlayer2">
-		<?php groveOfTrees("atree", 3200, 300, 300, 8, 80, 15, 300); ?>
-	</div><div id="treep5l3l" class="screen screenlayer3">
-		<?php groveOfTrees("atree", 3200, 300, 300, 3, 80, 15, 300); ?>
-	</div><div id="treep5l3r" class="screen screenlayer3">
-		<?php groveOfTrees("atree", 3200, 300, 300, 3, 80, 15, 300); ?>
-	</div>
-	
-	<div id="treep6l1l" class="screen screenlayer1">
-		<?php groveOfTrees("atree", 3200, 300, 300, 15, 80, 15, 300); ?>
-	</div><div id="treep6l1r" class="screen screenlayer1">
-		<?php groveOfTrees("atree", 3200, 300, 300, 15, 80, 15, 300); ?>
-	</div><div id="treep6l2l" class="screen screenlayer2">
-		<?php groveOfTrees("atree", 3200, 300, 300, 7, 80, 15, 300); ?>
-	</div><div id="treep6l2r" class="screen screenlayer2">
-		<?php groveOfTrees("atree", 3200, 300, 300, 8, 80, 15, 300); ?>
-	</div><div id="treep6l3l" class="screen screenlayer3">
-		<?php groveOfTrees("atree", 3200, 300, 300, 2, 80, 15, 300); ?>
-	</div><div id="treep6l3r" class="screen screenlayer3">
-		<?php groveOfTrees("atree", 3200, 300, 300, 3, 80, 15, 300); ?>
-	</div>
-
-	
-	<div id="background" class="strip">
+		
+	<div id="background" class="screen">
 	</div>
 	
 	<div id="pages" class="strip">
-		<div class="page">
-			<img src="media/logo.png" class="logo" alt="" />
+		<div class="page" style="background: none; box-shadow: none; margin-left: 595px;">
+			<div class="logo">
+				<img src="media/logo.png" class="logo" alt="" />
+			</div>
 		</div>	
 
 		<div class="page">
 			<h1 class="title">Tickets</h1>
+			<p style="width: 600px";>Tickets will be available for Jesus College students from the 21st of February at 8am, for a week before general release on the 28th of February at 9pm.</p>
+
 			<div class="columns">
-			<div id="left" class="two-column">
-				<p>Tickets will be available for Jesus College students from the 20th of February, for a week before general release on the 27th of February.</p>
-				<p>Each student may buy up to five tickets (i.e. themselves and four guests).</p>
-				<h4>General Release</h4>
-				<p class="snug">9pm</p>
-				<p class="snug">27/02/2014</p>
-				<h4>Reserve Tickets Now</h4>
-				<p class="snug">Reserve tickets now and pay via bank transfer.</p>
-				<!--<p>* Sorry, all tickets are now sold out. If you are still interested, please add your name to the waiting list. The waiting list is only open to Jesuans until general release, when it is opened to everyone.</p>
-				<p>[<a href="tickets/reserve.php">Waiting List</a>]</p>-->
+			<!--<div id="left" class="two-column">
+					<h4>Jesus College Bar Sales</h4>
+					<p class="snug">6pm</p>
+					<p class="snug">20/02/2014</p>
+					<p class="snug">In Jesus College Bar only.</p>
+					<h4>Jesus College Release</h4>
+					<p class="snug">8am</p>
+					<p class="snug">21/02/2014</p>
+					<h4>General Release</h4>
+					<p class="snug">9pm</p>
+					<p class="snug">27/02/2014</p>
+				</div>-->
+				<div id="left" class="three-column">
+					<h4>Standard</h4>
+					<p class="snug">- £123 + £2 -</p>
+					<!--<p class="snug">(SOLD OUT)</p>-->
+					<p class="snug">Enjoy unlimited food drinks and entertainment!</p>
+				</div>
+				<div id="center" class="three-column">
+					<h4>Priority</h4>
+					<p class="snug">- £139 + £2 -</p>
+					<!--<p class="snug">(SOLD OUT)</p>-->
+					<p class="snug">Take advantage of early entry and jump the queue!</p>
+				</div>
+				<div id="right" class="three-column">
+					<h4>Dining</h4>
+					<p class="snug">- £159 + £2 -</p>
+					<!--<p class="snug">(SOLD OUT)</p>-->
+					<p class="snug">Indulge in a champagne reception and a three course meal in Jesus Hall!</p>
+				</div>
 			</div>
-			<div id="right" class="two-column">
-				<h4>Standard</h4>
-				<p class="snug">- £123 + £2 -</p>
-				<!--<p class="snug">(SOLD OUT)</p>-->
-				<p class="snug">Enjoy unlimited food drinks and entertainment!</p>
-				<h4>Priority</h4>
-				<p class="snug">- £139 + £2 -</p>
-				<!--<p class="snug">(SOLD OUT)</p>-->
-				<p class="snug">Take advantage of early entry and jump the queue!</p>
-				<h4>Dining</h4>
-				<p class="snug">- £159 + £2 -</p>
-				<!--<p class="snug">(SOLD OUT)</p>-->
-				<p class="snug">Indulge in a champagne reception and a three course meal in Jesus Hall!</p>
-				<br />
-				<p>All tickets are sold with an optional £2 charitable donation. Please see our <a id="ticketLinkToCharity" href="">charities page</a> for more information.</p>
-			</div>
-			</div>
-			<div id="header-link"><h1><a>Reserve your tickets here</a></h1></div>
+			<br/>
+			<br/>
+			<br/>
+			<p>All tickets are sold with an optional £2 charitable donation.</p>
+			<p>Please see our <a id="ticketLinkToCharity" href="">charities page</a> for more information.</p>
+			<p>Each student may buy up to five tickets (i.e. themselves and four guests).</p>
+			<p>Reserve tickets now and pay via bank transfer.</p>
+			<!--<p>* Sorry, all tickets are now sold out. If you are still interested, please add your name to the waiting list. The waiting list is only open to Jesuans until general release, when it is opened to everyone.</p>
+			<p>[<a href="tickets/reserve.php">Waiting List</a>]</p>-->
+			
+			<div id="header-link"><h2><a>Reserve your tickets here</a></h2></div>
 		</div>
 
 		<div class="page">
 			<h1 class="title">Charites</h1>
+			Each year Mayball goers make a small donation with each ticket purchase. These procceeds go to a selection of charities. This year Jesus College Mayball is supporting Jimmy's Cambridge and Afrinspire.
+			<div id="columns">
 			<div id="left" class="two-column">
-			<div class="charity-logo"><a href="www.jimmyscambridge.org.uk" target="_blank"><img src="media/jimmys.png"></a></div>
+			<div class="charity-logo"><a href="http://www.jimmyscambridge.org.uk" target="_blank"><h2>Jimmy's Cambridge</h2><!--<img src="media/jimmys.png">--></a></div>
 			Open 24 hours a day, 365 days a year, Jimmy’s is the only emergency accommodation provider in
 			 Cambridge. Jimmy's offers a warm, welcoming environment to 20 men and women (and two dogs) who
 			  would otherwise be forced to sleep rough or in inappropriate or inadequate conditions. Since
 			   1995, Jimmy's has worked with over 6,000 different people.
 			<br/><br/>
-			Please visit their website <a href="www.jimmyscambridge.org.uk" target="_blank">here</a>.
+			For more information please visit their website <a href="www.jimmyscambridge.org.uk" target="_blank">here</a>.
 			</div>
 			<div id="right" class="two-column">
-			<div class="charity-logo"><a href="www.afrinspire.org.uk" target="_blank"><img src="media/afrinspire.png"></a></div>
-			Money donated to Afrinspire via the May Ball Charity Fund initiative will be directed towards
-			 a new grass-roots project for the May Ball Presidents' Committee. The project will facilitate
-			  the building and development of a number of classrooms in a new primary school in Uganda.
+			<div class="charity-logo"><a href="http://www.afrinspire.org.uk" target="_blank"><h2>Afrinspire</h2><!--<img src="media/afrinspire.png">--></a></div>
 			   Afrinspire supports indigenous development initiatives across East Africa through initiatives
 			    ranging from the provision of education materials to financing the construction of water tanks.
+			Your donations, via the May Ball Charity Fund initiative, will contribute to a new grass-roots project to
+			 facilitate the building and development of a number of classrooms in a new primary school in Uganda.
+
 			<br/><br/>
-			Please visit their website <a href="www.afrinspire.org.uk" target="_blank">here</a>.
+			For more information please visit their website <a href="www.afrinspire.org.uk" target="_blank">here</a>.
+			</div>
 			</div>
 			
 		</div>		
 
 		<div class="page">
 			<h1 class="title">Staffing</h1>
-			<div class="columns">
-			<div id="left" class="two-column">
 				<h4>Staffing</h4>
 				<p>Want to make money in May Week and be part of a great event, working in a team? </p>
-				<p>Jesus May Ball Committee is looking for enthusiastic, hard working students to make the 17th June a spectacular night.</p>
+				<p>Jesus May Ball Committee is looking for enthusiastic, hard working students to make the 16th June a spectacular night.</p>
 				<p>Workers will be employed in a variety of areas including food, drinks and entertainments.</p>
-				<p>We don't operate a &lsquo;half-on, half-off&rsquo; employment policy like many May Balls so you have the chance to earn around £65 for a night's work.</p>
-			</div>
-			<div id="right" class="two-column">
+				<p>We don't operate a &lsquo;half-on, half-off&rsquo; employment policy like many May Balls so you have the chance to earn around &pound;65 for a night's work.</p>
 				<h4>Applications</h4>
 				<p>Apply with a group of friends and we will try and ensure that you are put together. If you're interested, online applications for all staffing posts are now open!</p>
-				<p>Hurry, the application deadline has been brought forward to Sunday 24th February.</p>
+				<!--<p>Hurry, the application deadline is Sunday 24th February.</p>-->
 				<!--<p>[Sorry, Applications have not yet opened. Please come back soon.]</p>
 				<p>[Sorry, Applications are now closed]</p>-->
-			</div>
-			</div>
-			<div class="header-link"><h1><a href="www.jesusmayball.com/staff">Apply here</a></h1></div>
+			<div class="header-link"><h2><a href="http://www.jesusmayball.com/staff">Apply here</a></h2></div>
 		</div>
 
 		<div class="page">
 				<h1 class="title">Entertainment Auditions</h1>
-				<p>The ents team is currently holding auditions on the 2nd and 9th of March.</p>
+				<p>The ents team will be holding auditions on the 2nd and 9th of March so sign up below.</p>
 				<p>If you cannot attend any of the timetabled audition slots, you may still submit your act for consideration.</p>
 				<!--<p>[Sorry, auditions are now closed.]</p>-->
-				<div class="header-link"><h1><a href="">Register for an audition here.</a></h1></div>
+				<div class="header-link"><h2><a href="http://www.jesusmayball.com/ents">Register for an audition here.</a></h2></div>
 		</div>
 		
-		<div class="page">
+		<div class="page" style="margin-right: 595px;>
 			<h1 class="title">2014 Committee</h1>
 			<div id="left" class="three-column">
 				<h4><a title="Email President" href="mailto:mayball-president@jesus.cam.ac.uk" >President</a></h4>
@@ -272,8 +249,42 @@ function groveOfTrees($tree, $width, $adjustLeft, $adjustRight, $numTrees, $tree
 				<a class="floating-menu-link" id="entertainment-link" href="">Entertaiment</a>		
 				<a class="floating-menu-link" id="committee-link" href="">Committee</a>
 			</div>
-			<div id="footer_message">Jesus May Ball 2014</div>
 		</div>
 	</div>
+	<script>
+
+	var st=(document.all);
+	var spl=(document.all);
+	var ns4=document.layers;
+	var ns6=document.getElementById&&!document.all;
+	var ie4=document.all;
+	if (ns4){
+		st=document.site;
+		spl=document.splash
+	}else if (ns6){
+		st=document.getElementById("site").style;
+		spl=document.getElementById("splash").style;
+	}else if (ie4){
+		st=document.all.site.style;
+		spl=document.all.splash.style;
+	}
+	
+	function init(){
+		setTimeout(function(){
+			if(ns4){st.visibility="visible";
+				spl.visibility="hidden";}
+			else if (ns6||ie4){st.visibility="visible";
+				spl.visibility="hidden";}
+			
+			Ready();
+			
+			updateTrees();
+			$('html, body').scrollLeft(pageInfo[2].start);
+			pageTarget = (pageInfo[0].finish + pageInfo[0].start - $(window).width())/2;
+			scrollToPage(1);//$('html, body').animate({scrollLeft: pageTarget}, 2500);
+		}, 500);
+	}
+	</script>
+	
 </body>
 </html>
