@@ -1,3 +1,92 @@
+h1{
+	margin-top: 50px;
+	color: #E6E6FF;
+}
+h2{
+	margin: 5px auto;
+	color: #E6E6FF;
+}
+h4{
+	color: #E6E6FF;
+}
+a{
+	color: #E6E6FF;
+}
+
+
+#mobile{
+	display: block;
+	background-image: url('media/mobileBackground.jpg');
+	width: 100%;
+	color: white;
+}
+#small{
+	display: none;
+}
+#splash{
+	display: none;
+}
+#site{
+	display: none;
+}
+body{
+	overflow-y: scroll;
+	overflow-x: hidden;
+}
+#mobileLogo{
+	width: 100%;
+}
+
+@media only screen and (min-width: 300px){
+#mobile{
+	display: none;
+}
+body{
+	overflow-y: scroll;
+	overflow-x: hidden;
+}
+#small{
+	display: block;
+	background-color: black;
+	color: white;
+}
+#smallBody{
+	background-image: url('media/mobileBackground.jpg');
+	width: 70%;
+	margin: 0px 15%;
+	padding-bottom: 30px;
+	min-width: 210px;
+	text-align: center;
+}
+
+#splash{
+	display: none;
+}
+#site{
+	display: none;
+}
+#smallLogo{
+	max-height: 300px;
+	height: 80%;
+	margin: 5px auto;
+}
+
+	
+}
+
+@media only screen and (min-width: 800px) and (min-height: 600px) {
+#mobile{
+	display: none;
+}
+#small{
+	display: none;
+}
+#splash{
+	display: block;
+}
+#site{
+	display: block;
+}
 div {
 	//terquoise: #008E8F;
 	//dark blue: #244163;
@@ -20,7 +109,7 @@ body{
 }
 
 .bodydiv {
-	width: 11820px;
+	width: 10000px;
 	overflow: hidden;
 	display: block;
 	margin: 0px;
@@ -203,6 +292,7 @@ a:hover{
 h1 {
 	display: block;
 	text-align: center;
+	color: #0e3855;
 }
 h2 {
 	margin: 20px 0px;
@@ -259,46 +349,5 @@ img.logo{
 	text-align: center;
 }
 
-#mobile{
-	display: block;
-}
-#small{
-	display: none;
-}
-#splash{
-	display: none;
-}
-#site{
-	display: none;
-}
-
-@media only screen and (min-width: 300px) and (min-height: 400px) {
-#mobile{
-	display: none;
-}
-#small{
-	display: block;
-}
-#splash{
-	display: none;
-}
-#site{
-	display: none;
-}	
-}
-
-@media only screen and (min-width: 800px) and (min-height: 600px) {
-#mobile{
-	display: none;
-}
-#small{
-	display: none;
-}
-#splash{
-	display: block;
-}
-#site{
-	display: block;
-}
 }
 

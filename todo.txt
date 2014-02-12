@@ -1,4 +1,3 @@
-Fix Trees
 Titles and links with new font
 
 Calibrate trees for smaller page/make trees permanent
@@ -10,9 +9,6 @@ Check cross browser compatability
 
 Splash animation
 Highlight current page
-
-Better looking bottom menu (cloud/mist)
-More pretty things (shadows from trees and shrubs?)
-
+Shade Trees
 
 
