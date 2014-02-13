@@ -1,5 +1,6 @@
 	var pageInfo;
 	var pageTarget;
+	var horizontalScrolling;
 		
 
 
@@ -9,7 +10,11 @@
 	$(document).ready(function(){
 	});	
 	
-
+	$(window).resize(function() {
+		if( $(window).width() < 800 || $(window).height() < 600){
+			horizontalScrolling = false;
+		}		
+	});
 	
 	function Page(){
 		var start = 0;
@@ -21,11 +26,15 @@
 	}
 	
 	function Ready(){
-		
+		if( $(window).width() < 800 || $(window).height() < 600){
+			horizontalScrolling = false;
+		}
        $('body').bind('mousewheel', function(event, delta, deltaX, deltaY) {
-            var scroll = parseInt( $(window).scrollLeft() );
-            $('html, body').scrollLeft( scroll - ( deltaY * 5 ) );
-            event.preventDefault();
+			if (horizontalScrolling){
+				var scroll = parseInt( $(window).scrollLeft() );
+				$('html, body').scrollLeft( scroll - ( deltaY * 5 ) );
+				event.preventDefault();
+			}
         });
 		
 		
@@ -115,37 +124,39 @@
 
 		var interval;
 		window.addEventListener("keydown", function(event) {
-			if (event.which == 33 || event.which == 40) {
-				//page up/up arrow
-				scrollToPage(detectPage(pageTarget)+1);
-				event.preventDefault()
-			} else if(event.which == 34 || event.which == 38){
-				//page down/down arrow
-				scrollToPage(detectPage(pageTarget)-1);
-				event.preventDefault()
-			} else if(event.which == 35){
-				//end
-				scrollToPage(pageInfo.length);
-				event.preventDefault()
-			} else if(event.which ==36){
-				//home
-				scrollToPage(1);
-				event.preventDefault()
-			} else if(event.which == 37){
-				//left arrow
-				clearInterval(interval);
-				event.preventDefault();
-				interval = setInterval(function() {
-					$('html, body').scrollLeft($(window).scrollLeft()-1);
-				}, 1);
-				
-			} else if(event.which == 39){
-				//right arrow
-				clearInterval(interval);
-				event.preventDefault();
-				interval = setInterval(function() {
-					$('html, body').scrollLeft($(window).scrollLeft()+1);
-				}, 1);
+			if (horizontalScrolling){
+				if (event.which == 33 || event.which == 40) {
+					//page up/up arrow
+					scrollToPage(detectPage(pageTarget)+1);
+					event.preventDefault()
+				} else if(event.which == 34 || event.which == 38){
+					//page down/down arrow
+					scrollToPage(detectPage(pageTarget)-1);
+					event.preventDefault()
+				} else if(event.which == 35){
+					//end
+					scrollToPage(pageInfo.length);
+					event.preventDefault()
+				} else if(event.which ==36){
+					//home
+					scrollToPage(1);
+					event.preventDefault()
+				} else if(event.which == 37){
+					//left arrow
+					clearInterval(interval);
+					event.preventDefault();
+					interval = setInterval(function() {
+						$('html, body').scrollLeft($(window).scrollLeft()-1);
+					}, 1);
+					
+				} else if(event.which == 39){
+					//right arrow
+					clearInterval(interval);
+					event.preventDefault();
+					interval = setInterval(function() {
+						$('html, body').scrollLeft($(window).scrollLeft()+1);
+					}, 1);
+				}
 			}
 		});	
 		

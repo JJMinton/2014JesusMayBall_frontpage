@@ -1,14 +1,12 @@
 Titles and links with new font
-
 Calibrate trees for smaller page/make trees permanent
 
-Construct small screen site
-Construct mobile site
-
+More effective mobile switch
+More effective return to size
 Check cross browser compatability
 
-Splash animation
+Renew splash animation
 Highlight current page
-Shade Trees
+Highlight logo
 
 

@@ -20,8 +20,8 @@
 	<div id="mobile" class="mobileBody">
 		<div id="mobileBody">
 			<img id="mobileLogo" src="media/logo.png" class="logo" alt="Loading..." />
-			<h1 class="mobileTitle">Welcome to Jesus Mayball 2014</h1>
-				<p style="width: 600px";>Tickets will be available for Jesus College students from the 21st of February at 8am, for a week before general release on the 28th of February at 9pm.</p>
+			<h1 class="mobileTitle">Jesus Mayball 2014</h1>
+				<p>Tickets will be available for Jesus College students from the 21st of February at 8am, for a week before general release on the 28th of February at 9pm.</p>
 					<h4>Standard</h4>
 					<p class="snug">- £127 + £2 -</p>
 					<!--<p class="snug">(SOLD OUT)</p>-->
@@ -35,8 +35,11 @@
 					<!--<p class="snug">(SOLD OUT)</p>-->
 					<p class="snug">Indulge in a champagne reception and a three course meal in Jesus Hall!</p>
 					<p>Book your ticket <a href="tickets">here</a>.</p>
+				<br/>
 				<p>Staffing applications can be found <a href="staff">here</a>.</p>
+				<br/>
 				<p>Ents applications can be found <a href="ents">here</a>.</p>
+				<br/><br/>
 				<p>Please visit our desktop site for more information.</p>
 			<h1 class=""></h1>
 		</div>
@@ -47,7 +50,7 @@
 			<img id="smallLogo" src="media/logo.png" class="logo" alt="Jesus Mayball 2014" />
 			
 			<h1 class="smallTitle">Tickets</h1>
-				<p style="width: 600px";>Tickets will be available for Jesus College students from the 21st of February at 8am, for a week before general release on the 28th of February at 9pm.</p>
+				<p>Tickets will be available for Jesus College students from the 21st of February at 8am, for a week before general release on the 28th of February at 9pm.</p>
 				<h4>Standard</h4>
 				<p class="snug">- £127 + £2 -</p>
 				<!--<p class="snug">(SOLD OUT)</p>-->
@@ -60,7 +63,6 @@
 				<p class="snug">- £164 + £2 -</p>
 				<!--<p class="snug">(SOLD OUT)</p>-->
 				<p class="snug">Indulge in a champagne reception and a three course meal in Jesus Hall!</p>
-				<br/>
 				<br/>
 				<p>All tickets are sold with an optional £2 charitable donation.</p>
 				<p>Please see our <a id="ticketLinkToCharity" href="">charities page</a> for more information.</p>
@@ -156,7 +158,7 @@ function groveOfTrees($tree, $width, $adjustLeft, $adjustRight, $numTrees, $tree
 
 		<div class="page">
 			<h1 class="title">Tickets</h1>
-			<p style="width: 600px";>Tickets will be available for Jesus College students from the 21st of February at 8am, for a week before general release on the 28th of February at 9pm.</p>
+			<p>Tickets will be available for Jesus College students from the 21st of February at 8am, for a week before general release on the 28th of February at 9pm.</p>
 
 			<div class="columns">
 				<div id="left" class="three-column">
