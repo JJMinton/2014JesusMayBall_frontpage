@@ -1,12 +1,10 @@
 Titles and links with new font
 Calibrate trees for smaller page/make trees permanent
 
-More effective mobile switch (solution found)
-More effective return to size (javascript debug)
-Check cross browser compatability
-
 Renew splash animation
-Highlight current page
 Highlight logo
 
+Check cross browser compatability
+
+Highlight current page
 

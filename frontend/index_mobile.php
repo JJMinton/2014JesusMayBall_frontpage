@@ -1,7 +1,9 @@
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<meta name="viewport" content="width=device-width" />
-<title>Jesus May Ball 2014</title>
-<link href="./index_mobile.css" rel="stylesheet" type="text/css" />
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="viewport" content="width=device-width" />
+	<title>Jesus May Ball 2014</title>
+	<link href="./index_mobile.css" rel="stylesheet" type="text/css" />
+	<link rel="shortcut icon" href="media/favicon.ico">
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 	<!--<script src="parallax.js" type="text/javascript"></script>-->
 </head>

@@ -1,21 +1,12 @@
 	var pageInfo;
 	var pageTarget;
-	var horizontalScrolling;
-		
-
-
-
-
-
-	$(document).ready(function(){
-	});	
+	var largeScreen;
+	// SETS LARGE SCREEN FLAG
+	function checkScreenSize(){
+		largeScreen = !( $(window).width() < 800 || $(window).height() < 600);	
+	}
 	
-	$(window).resize(function() {
-		if( $(window).width() < 800 || $(window).height() < 600){
-			horizontalScrolling = false;
-		}		
-	});
-	
+	//STORAGE OBJECT
 	function Page(){
 		var start = 0;
 		var paddingLeft = 0;
@@ -25,19 +16,8 @@
 		var finish = 0;
 	}
 	
-	function Ready(){
-		if( $(window).width() < 800 || $(window).height() < 600){
-			horizontalScrolling = false;
-		}
-       $('body').bind('mousewheel', function(event, delta, deltaX, deltaY) {
-			if (horizontalScrolling){
-				var scroll = parseInt( $(window).scrollLeft() );
-				$('html, body').scrollLeft( scroll - ( deltaY * 5 ) );
-				event.preventDefault();
-			}
-        });
-		
-		
+	// GATHER INFORMATION ON PAGE SIZES
+	function pagePositionCheck(){
 		pages = $('.page');
 		//var screenWidth = $(window).width();
 		pageInfo = new Array(pages.length);
@@ -59,12 +39,21 @@
 			counter += parseInt(pages.eq(i).css('margin-right').replace("px",""));
 			pageInfo[i].finish = counter;
 		}
-		$("#pages").css('width', counter +"px");
+		//$("#pages").css('width', counter +"px");
+	}
+
+    $(function() {
+
+    });	
+	
+	//FUNCTION TO CALL ON LOAD
+	function Ready(){
+		checkScreenSize();
 		
+		pagePositionCheck();		
 
 		
-		
-
+		//PAGE LINKS
 		$("#logo-link").click(function(e){
 			e.preventDefault();
 			scrollToPage(1);
@@ -117,21 +106,31 @@
 			e.preventDefault();
 			scrollToPage(3);
 		});
-				
+		
+		//TREE MOVER
 		window.addEventListener('scroll', function(event) {
 			updateTrees();
 		});
-
-		var interval;
+		
+		
+		//NAVIGATION CONTROLS
+		$('body').bind('mousewheel', function(event, delta, deltaX, deltaY) {
+			if(largeScreen){
+				var scroll = parseInt( $(window).scrollLeft() );
+				$('html, body').scrollLeft( scroll - ( deltaY * 5 ) );
+				event.preventDefault();
+			}
+        });
+        var interval;
 		window.addEventListener("keydown", function(event) {
-			if (horizontalScrolling){
-				if (event.which == 33 || event.which == 40) {
+			if (largeScreen){
+				if (event.which == 33 || event.which == 38) {
 					//page up/up arrow
-					scrollToPage(detectPage(pageTarget)+1);
-					event.preventDefault()
-				} else if(event.which == 34 || event.which == 38){
-					//page down/down arrow
 					scrollToPage(detectPage(pageTarget)-1);
+					event.preventDefault()
+				} else if(event.which == 34 || event.which == 40){
+					//page down/down arrow
+					scrollToPage(detectPage(pageTarget)+1);
 					event.preventDefault()
 				} else if(event.which == 35){
 					//end
@@ -148,7 +147,6 @@
 					interval = setInterval(function() {
 						$('html, body').scrollLeft($(window).scrollLeft()-1);
 					}, 1);
-					
 				} else if(event.which == 39){
 					//right arrow
 					clearInterval(interval);
@@ -159,21 +157,12 @@
 				}
 			}
 		});	
-		
 		window.addEventListener("keyup", function(event) {
 			if(event.which == 37 || event.which == 39){
 				clearInterval(interval); 
 				interval = null;
 			}
-		});
-		
-		//Scrolling - scrolling package breaks on Mica's and Emma's laptops
-		//TODO: find cross compatibility solution
-		//$("body").mousewheel(function(event, delta) {
-		//	this.scrollLeft -= (delta * 40);
-		//	event.preventDefault();
-		//});
-		
+		});		
 	}
 	
 
@@ -184,7 +173,6 @@
 				$('#treep1l2l').css('left', -5*offset + "px");
 				$('#treep1l3l').css('left', -12*offset + "px");
 	}
-	
 	function moveTree(tree, treePositionMultiplier, pagePosition, page, left){
 		//TODO: Check if hidden
 		if(page<1 || page>pageInfo.length){
@@ -217,9 +205,7 @@
 		pageTarget = (pageInfo[pageNumber-1].pageLeft + pageInfo[pageNumber-1].pageRight - $(window).width())/2;
 		$('html, body').animate({scrollLeft: pageTarget}, 3000);
 		
-	};
-	
-	
+	};	
 	function detectPage(position){
 		if(!position){
 			position = $(window).scrollLeft();
@@ -231,3 +217,8 @@
 		}
 		return pageInfo.length;
 	}
+
+	$(window).resize(function() {
+		checkScreenSize();
+		pagePositionCheck();
+	});
