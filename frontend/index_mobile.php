@@ -28,8 +28,10 @@
 				<p class="snug">Indulge in a champagne reception and enjoy a three course meal in Jesus Upper Hall!</p>
 				<p>Book your ticket <a href="tickets">here</a>.</p>
 			<br/>
+			<h3>Staffing</h4>
 			<p>Staffing applications can be found <a href="staff">here</a>.</p>
 			<br/>
+			<h3>Entertainment</h4>
 			<p>Ents applications can be found <a href="ents">here</a>.</p>
 			<br/><br/>
 			<p>Please visit our desktop site for more information.</p>

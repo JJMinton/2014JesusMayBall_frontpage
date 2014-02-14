@@ -11,7 +11,7 @@ body{
 	font-family: Georgia, serif;
 }
 
-h1, h2, h4{
+h1, h2, h4, h3{
 	font-family: titleFont, Georgia, serif;
 }
 
@@ -39,6 +39,11 @@ h1{
 h2{
 	margin: 5px auto;
 	color: #E6E6FF;
+}
+h3{
+	color: #E6E6FF;
+	margin-top: 17px;
+	margin-bottom: 10px;
 }
 h4{
 	color: #E6E6FF;
