@@ -1,3 +1,58 @@
+@font-face{
+font-family: titleFont;
+src: url(media/episode1.ttf);
+}
+
+
+/*General Requirements*/
+
+a{
+	text-decoration: none;
+}
+a:visited{
+	text-decoration: none;
+}
+a:hover{
+	text-decoration: underline;
+}
+h1, h2, h4{
+	font-family: titleFont, Georgia, serif;
+}
+h2{
+	font-size: 22px;
+}
+h4{
+	font-size: 15px;
+}
+
+.columns {
+	display: inline-block;
+}
+#left {
+	float: left;
+	margin-left: 10px
+}
+#center{
+	float: left;
+	margin-left: auto;
+	margin-right: auto;
+}
+#right{
+	float: right;
+	margin-right: 10px;
+}
+.two-column {
+	width: 335px;
+	text-align: center;
+}
+.three-column {
+	margin: 0px 20px;
+	width: 213px;
+	text-align: center;
+}
+
+/*Small Page Specific*/
+
 h1{
 	margin-top: 50px;
 	color: #E6E6FF;
@@ -14,6 +69,7 @@ h4{
 a{
 	color: #E6E6FF;
 }
+
 p{
 	text-align: center;
 	margin: 0px auto;
@@ -120,10 +176,10 @@ body{
 	float: left;
 	overflow: hidden;
 	width: 700px;
-	height: 500px;
+	height: 480px;
 	display: table;
-	margin: 20px 395px;
-	padding: 15px 40px;
+	margin: 20px 430px;
+	padding: 5px 5px;
 	background: rgb(189,189,209);
 	background: rgba(230,230,255,0.75);
 	border-radius: 15px;
@@ -196,32 +252,6 @@ body{
 	height: 100%;
 }
 
-.columns {
-	display: inline-block;
-}
-#left {
-	float: left;
-	margin-left: 10px
-}
-#center{
-	float: left;
-	margin-left: auto;
-	margin-right: auto;
-}
-#right{
-	float: right;
-	margin-right: 10px;
-}
-.two-column {
-	width: 315px;
-	text-align: center;
-}
-.three-column {
-	margin: 0px 20px;
-	width: 213px;
-	text-align: center;
-}
-
 div#footer_wrapper {
 	z-index: 10;
 	width: 100%;
@@ -250,8 +280,10 @@ div#floating-menu {
 }
 
 .floating-menu-link {
-	padding: 5px 20px;
+	padding: 3px 20px;
 	margin: 30px 0px;
+	font-family: titleFont, Georgia, serif;
+	font-size: 15px;
 }
 .floating-menu-link:link {
 	color: #244163;
@@ -280,15 +312,12 @@ img {
 
 a{
 	color: #244163;
-	text-decoration: none;
 }
 a:visited{
 	color: #1D4560;
-	text-decoration: none;
 }
 a:hover{
 	color: #E6E6FF;
-	text-decoration: underline;
 }
 
 .header-link {
@@ -298,13 +327,13 @@ a:hover{
 }
 
 h1 {
-	margin-top: 20px;
+	margin-top: 5px;
 	display: block;
 	text-align: center;
 	color: #0e3855;
 }
 h2 {
-	margin: 20px 0px;
+	margin: 15px 0px;
 	color: inherit;
 }
 .title {
@@ -316,7 +345,7 @@ h2 {
 h4 {
 	color: #0e3855;
 	margin: 5px;
-	margin-top: 15px;
+	margin-top: 7px;
 }
 
 

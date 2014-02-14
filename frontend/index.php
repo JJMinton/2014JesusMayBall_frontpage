@@ -32,15 +32,15 @@ header('Location: index_mobile.php');
 				<p>Tickets will be available for members of Jesus College from 8am on 21st of February 2014. Remaining tickets will be put on General Release
 				to all members of the University from 9pm on 28th February 2014.</p>
 				<h4>Standard</h4>
-				<p class="snug">- £127 - <br/>- plus £2 Charity Donation -</p>
+				<p class="snug">£127<br/>plus £2 Charity Donation</p>
 				<!--<p class="snug">(SOLD OUT)</p>-->
 				<p class="snug">Enjoy unlimited food, drink and entertainment!</p>
 				<h4>Priority</h4>
-				<p class="snug">- £143 - <br/>- plus £2 Charity Donation -</p>
+				<p class="snug">£143<br/>plus £2 Charity Donation</p>
 				<!--<p class="snug">(SOLD OUT)</p>-->
 				<p class="snug">Take advantage of early entry and jump the queue! Then continue the night in style with a champagne reception upon entry.</p>
 				<h4>Dining</h4>
-				<p class="snug">- £164 - <br/>- plus £2 Charity Donation -</p>
+				<p class="snug">£164<br/>plus £2 Charity Donation</p>
 				<!--<p class="snug">(SOLD OUT)</p>-->
 				<p class="snug">Indulge in a champagne reception and enjoy a three course meal in Jesus Upper Hall!</p>
 				<br/>
@@ -52,7 +52,7 @@ header('Location: index_mobile.php');
 				each ticket purchase. This year Jesus College May Ball is supporting 
 				Jimmy's Cambridge and Afrinspire.
 
-				<a href="http://www.jimmyscambridge.org.uk" target="_blank"><h4>Jimmy's Cambridge</h4></a>
+				<h4><a href="http://www.jimmyscambridge.org.uk" target="_blank">Jimmy's Cambridge</a></h4>
 				For more information please visit their website <a href="www.jimmyscambridge.org.uk" target="_blank">here</a>.
 
 				<a href="http://www.afrinspire.org.uk" target="_blank"><h4>Afrinspire</h4></a>
@@ -100,30 +100,129 @@ function groveOfTrees($tree, $width, $adjustLeft, $adjustRight, $numTrees, $tree
 }
 ?>
 <div id="site" class="bodydiv" style="visibility: hidden;">
-	<div id="treep1l1l" class="screen screenlayer1">
-		<?php groveOfTrees("atree", 2400, 40, 350, 3, 80, 15, 300); ?>
-		<?php groveOfTrees("atree", 6280, 1020, 350, 7, 80, 15, 300); ?>
-		<?php groveOfTrees("atree", 6280, 1020, 350, 7, 80, 15, 300); ?>
-		<?php groveOfTrees("atree", 6280, 1020, 350, 6, 80, 15, 300); ?>
-		<?php groveOfTrees("atree", 6280, 1020, 350, 6, 80, 15, 300); ?>
-		<?php groveOfTrees("atree", 6280, 1020, 350, 7, 80, 15, 300); ?>
-		<?php groveOfTrees("atree", 2495, 1020, 40, 3, 80, 15, 300); ?>
+	<!--<div id="treep1l1l" class="screen screenlayer1">
+		<?php //groveOfTrees("atree", 2400, 40, 350, 4, 80, 15, 500); ?>
+		<?php //groveOfTrees("atree", 6280, 1020, 350, 8, 80, 15, 500); ?>
+		<?php //groveOfTrees("atree", 6280, 1020, 350, 8, 80, 15, 500); ?>
+		<?php //groveOfTrees("atree", 6280, 1020, 350, 8, 80, 15, 500); ?>
+		<?php //groveOfTrees("atree", 6280, 1020, 350, 8, 80, 15, 500); ?>
+		<?php //groveOfTrees("atree", 6280, 1020, 350, 8, 80, 15, 500); ?>
+		<?php //groveOfTrees("atree", 2495, 1020, 40, 3, 80, 15, 500); ?>
 	</div><div id="treep1l2l" class="screen screenlayer2">
-		<?php groveOfTrees("atree", 3600, 40, 450, 1, 120, 23, 400); ?>
-		<?php groveOfTrees("atree", 9420, 1120, 450, 3, 120, 23, 400); ?>
-		<?php groveOfTrees("atree", 9420, 1120, 450, 2, 120, 23, 400); ?>
-		<?php groveOfTrees("atree", 9420, 1120, 450, 2, 120, 23, 400); ?>
-		<?php groveOfTrees("atree", 9420, 1120, 450, 3, 120, 23, 400); ?>
-		<?php groveOfTrees("atree", 9420, 1120, 450, 2, 120, 23, 400); ?>
-		<?php groveOfTrees("atree", 3743, 1120, 40, 1, 120, 23, 400); ?>
+		<?php //groveOfTrees("atree", 3600, 40, 450, 3, 120, 23, 400); ?>
+		<?php //groveOfTrees("atree", 9420, 1120, 450, 5, 120, 23, 400); ?>
+		<?php //groveOfTrees("atree", 9420, 1120, 450, 5, 120, 23, 400); ?>
+		<?php //groveOfTrees("atree", 9420, 1120, 450, 5, 120, 23, 400); ?>
+		<?php //groveOfTrees("atree", 9420, 1120, 450, 5, 120, 23, 400); ?>
+		<?php //groveOfTrees("atree", 9420, 1120, 450, 5, 120, 23, 400); ?>
+		<?php //groveOfTrees("atree", 3743, 1120, 40, 3, 120, 23, 400); ?>
 	</div><div id="treep1l3l" class="screen screenlayer3">
 		<?php //groveOfTrees("atree", 7800, 40, 100, 6, 80, 15, 0); ?>
-		<?php groveOfTrees("atree", 20410, 1370, 600, 2, 170, 100, 800); ?>
-		<?php groveOfTrees("atree", 20410, 1370, 600, 1, 170, 100, 800); ?>
-		<?php groveOfTrees("atree", 20410, 1370, 600, 1, 170, 100, 800); ?>
-		<?php groveOfTrees("atree", 20410, 1370, 600, 2, 170, 100, 800); ?>
-		<?php groveOfTrees("atree", 20410, 1370, 600, 1, 170, 100, 800); ?>
-		<?php groveOfTrees("atree", 8109, 1370, 40, 1, 170, 100, 800); ?>
+		<?php //groveOfTrees("atree", 20410, 1370, 600, 3, 170, 100, 800); ?>
+		<?php //groveOfTrees("atree", 20410, 1370, 600, 3, 170, 100, 800); ?>
+		<?php //groveOfTrees("atree", 20410, 1370, 600, 3, 170, 100, 800); ?>
+		<?php //groveOfTrees("atree", 20410, 1370, 600, 3, 170, 100, 800); ?>
+		<?php //groveOfTrees("atree", 20410, 1370, 600, 3, 170, 100, 800); ?>
+		<?php //groveOfTrees("atree", 8109, 1370, 40, 2, 170, 100, 800); ?>
+	</div>-->
+	<div id="treep1l1l" class="screen screenlayer1">
+			<div class="atree" style="margin-left:144px; width:81px; margin-right:150px;"><img src="media/tree03.png" class="stretch" alt="" /></div>
+		<div class="atree" style="margin-left:333px; width:78px; margin-right:259px;"><img src="media/tree06.png" class="stretch" alt="" /></div>
+		<div class="atree" style="margin-left:469px; width:76px; margin-right:125px;"><img src="media/tree07.png" class="stretch" alt="" /></div>
+		<div class="atree" style="margin-left:514px; width:86px; margin-right:85px;"><img src="media/tree02.png" class="stretch" alt="" /></div>
+			<div class="atree" style="margin-left:519px; width:84px; margin-right:767.71428571429px;"><img src="media/tree01.png" class="stretch" alt="" /></div>
+		<div class="atree" style="margin-left:68px; width:73px; margin-right:560.42857142857px;"><img src="media/tree05.png" class="stretch" alt="" /></div>
+		<div class="atree" style="margin-left:202px; width:85px; margin-right:414.42857142857px;"><img src="media/tree04.png" class="stretch" alt="" /></div>
+		<div class="atree" style="margin-left:350px; width:85px; margin-right:266.42857142857px;"><img src="media/tree04.png" class="stretch" alt="" /></div>
+		<div class="atree" style="margin-left:200px; width:72px; margin-right:429.42857142857px;"><img src="media/tree07.png" class="stretch" alt="" /></div>
+		<div class="atree" style="margin-left:130px; width:81px; margin-right:490.42857142857px;"><img src="media/tree06.png" class="stretch" alt="" /></div>
+		<div class="atree" style="margin-left:248px; width:77px; margin-right:376.42857142857px;"><img src="media/tree03.png" class="stretch" alt="" /></div>
+		<div class="atree" style="margin-left:436px; width:86px; margin-right:178.71428571429px;"><img src="media/tree05.png" class="stretch" alt="" /></div>
+			<div class="atree" style="margin-left:604px; width:83px; margin-right:683.71428571429px;"><img src="media/tree01.png" class="stretch" alt="" /></div>
+		<div class="atree" style="margin-left:255px; width:82px; margin-right:364.42857142857px;"><img src="media/tree07.png" class="stretch" alt="" /></div>
+		<div class="atree" style="margin-left:373px; width:76px; margin-right:252.42857142857px;"><img src="media/tree06.png" class="stretch" alt="" /></div>
+		<div class="atree" style="margin-left:417px; width:76px; margin-right:208.42857142857px;"><img src="media/tree07.png" class="stretch" alt="" /></div>
+		<div class="atree" style="margin-left:214px; width:81px; margin-right:406.42857142857px;"><img src="media/tree04.png" class="stretch" alt="" /></div>
+		<div class="atree" style="margin-left:453px; width:74px; margin-right:174.42857142857px;"><img src="media/tree05.png" class="stretch" alt="" /></div>
+		<div class="atree" style="margin-left:226px; width:79px; margin-right:396.42857142857px;"><img src="media/tree03.png" class="stretch" alt="" /></div>
+		<div class="atree" style="margin-left:193px; width:81px; margin-right:426.71428571429px;"><img src="media/tree02.png" class="stretch" alt="" /></div>
+			<div class="atree" style="margin-left:818px; width:87px; margin-right:465.71428571429px;"><img src="media/tree05.png" class="stretch" alt="" /></div>
+		<div class="atree" style="margin-left:321px; width:83px; margin-right:297.42857142857px;"><img src="media/tree04.png" class="stretch" alt="" /></div>
+		<div class="atree" style="margin-left:232px; width:75px; margin-right:394.42857142857px;"><img src="media/tree02.png" class="stretch" alt="" /></div>
+		<div class="atree" style="margin-left:271px; width:81px; margin-right:349.42857142857px;"><img src="media/tree07.png" class="stretch" alt="" /></div>
+		<div class="atree" style="margin-left:248px; width:75px; margin-right:378.42857142857px;"><img src="media/tree02.png" class="stretch" alt="" /></div>
+		<div class="atree" style="margin-left:130px; width:87px; margin-right:484.42857142857px;"><img src="media/tree04.png" class="stretch" alt="" /></div>
+		<div class="atree" style="margin-left:74px; width:76px; margin-right:551.42857142857px;"><img src="media/tree01.png" class="stretch" alt="" /></div>
+		<div class="atree" style="margin-left:494px; width:72px; margin-right:134.71428571429px;"><img src="media/tree02.png" class="stretch" alt="" /></div>
+			<div class="atree" style="margin-left:614px; width:78px; margin-right:758.71428571429px;"><img src="media/tree05.png" class="stretch" alt="" /></div>
+		<div class="atree" style="margin-left:72px; width:82px; margin-right:547.42857142857px;"><img src="media/tree03.png" class="stretch" alt="" /></div>
+		<div class="atree" style="margin-left:201px; width:83px; margin-right:417.42857142857px;"><img src="media/tree02.png" class="stretch" alt="" /></div>
+		<div class="atree" style="margin-left:492px; width:76px; margin-right:133.42857142857px;"><img src="media/tree07.png" class="stretch" alt="" /></div>
+		<div class="atree" style="margin-left:234px; width:81px; margin-right:386.42857142857px;"><img src="media/tree02.png" class="stretch" alt="" /></div>
+		<div class="atree" style="margin-left:351px; width:72px; margin-right:278.42857142857px;"><img src="media/tree06.png" class="stretch" alt="" /></div>
+		<div class="atree" style="margin-left:311px; width:78px; margin-right:312.42857142857px;"><img src="media/tree01.png" class="stretch" alt="" /></div>
+		<div class="atree" style="margin-left:413px; width:80px; margin-right:207.71428571429px;"><img src="media/tree07.png" class="stretch" alt="" /></div>
+			<div class="atree" style="margin-left:876px; width:81px; margin-right:413.71428571429px;"><img src="media/tree06.png" class="stretch" alt="" /></div>
+		<div class="atree" style="margin-left:212px; width:77px; margin-right:412.42857142857px;"><img src="media/tree03.png" class="stretch" alt="" /></div>
+		<div class="atree" style="margin-left:340px; width:84px; margin-right:277.42857142857px;"><img src="media/tree05.png" class="stretch" alt="" /></div>
+		<div class="atree" style="margin-left:192px; width:84px; margin-right:425.42857142857px;"><img src="media/tree03.png" class="stretch" alt="" /></div>
+		<div class="atree" style="margin-left:338px; width:72px; margin-right:291.42857142857px;"><img src="media/tree01.png" class="stretch" alt="" /></div>
+		<div class="atree" style="margin-left:466px; width:86px; margin-right:149.42857142857px;"><img src="media/tree03.png" class="stretch" alt="" /></div>
+		<div class="atree" style="margin-left:451px; width:76px; margin-right:174.42857142857px;"><img src="media/tree04.png" class="stretch" alt="" /></div>
+		<div class="atree" style="margin-left:398px; width:85px; margin-right:67.714285714286px;"><img src="media/tree07.png" class="stretch" alt="" /></div>
+			<div class="atree" style="margin-left:1162px; width:77px; margin-right:139.75px;"><img src="media/tree03.png" class="stretch" alt="" /></div>
+		<div class="atree" style="margin-left:482px; width:72px; margin-right:163.5px;"><img src="media/tree07.png" class="stretch" alt="" /></div>
+		<div class="atree" style="margin-left:480px; width:76px; margin-right:-157.25px;"><img src="media/tree04.png" class="stretch" alt="" /></div>
+	</div><div id="treep1l2l" class="screen screenlayer2">
+		<div class="atree" style="margin-left:-129px; width:121px; margin-right:825.5px;"><img src="media/tree07.png" class="stretch" alt="" /></div>
+		<div class="atree" style="margin-left:668px; width:111px; margin-right:776px;"><img src="media/tree05.png" class="stretch" alt="" /></div>
+		<div class="atree" style="margin-left:539px; width:117px; margin-right:571.5px;"><img src="media/tree03.png" class="stretch" alt="" /></div>
+			<div class="atree" style="margin-left:1070px; width:130px; margin-right:901.25px;"><img src="media/tree04.png" class="stretch" alt="" /></div>
+		<div class="atree" style="margin-left:897px; width:126px; margin-right:939.5px;"><img src="media/tree03.png" class="stretch" alt="" /></div>
+		<div class="atree" style="margin-left:1028px; width:121px; margin-right:813.5px;"><img src="media/tree05.png" class="stretch" alt="" /></div>
+		<div class="atree" style="margin-left:1003px; width:120px; margin-right:839.5px;"><img src="media/tree04.png" class="stretch" alt="" /></div>
+		<div class="atree" style="margin-left:990px; width:115px; margin-right:326.25px;"><img src="media/tree07.png" class="stretch" alt="" /></div>
+			<div class="atree" style="margin-left:938px; width:111px; margin-right:1052.25px;"><img src="media/tree07.png" class="stretch" alt="" /></div>
+		<div class="atree" style="margin-left:1108px; width:130px; margin-right:724.5px;"><img src="media/tree02.png" class="stretch" alt="" /></div>
+		<div class="atree" style="margin-left:907px; width:108px; margin-right:947.5px;"><img src="media/tree06.png" class="stretch" alt="" /></div>
+		<div class="atree" style="margin-left:851px; width:117px; margin-right:994.5px;"><img src="media/tree07.png" class="stretch" alt="" /></div>
+		<div class="atree" style="margin-left:1097px; width:119px; margin-right:215.25px;"><img src="media/tree03.png" class="stretch" alt="" /></div>
+			<div class="atree" style="margin-left:516px; width:128px; margin-right:1457.25px;"><img src="media/tree02.png" class="stretch" alt="" /></div>
+		<div class="atree" style="margin-left:1031px; width:114px; margin-right:817.5px;"><img src="media/tree01.png" class="stretch" alt="" /></div>
+		<div class="atree" style="margin-left:777px; width:109px; margin-right:1076.5px;"><img src="media/tree04.png" class="stretch" alt="" /></div>
+		<div class="atree" style="margin-left:1033px; width:126px; margin-right:803.5px;"><img src="media/tree01.png" class="stretch" alt="" /></div>
+		<div class="atree" style="margin-left:829px; width:118px; margin-right:484.25px;"><img src="media/tree03.png" class="stretch" alt="" /></div>
+			<div class="atree" style="margin-left:965px; width:119px; margin-right:1017.25px;"><img src="media/tree04.png" class="stretch" alt="" /></div>
+		<div class="atree" style="margin-left:728px; width:118px; margin-right:1116.5px;"><img src="media/tree04.png" class="stretch" alt="" /></div>
+		<div class="atree" style="margin-left:798px; width:129px; margin-right:1035.5px;"><img src="media/tree04.png" class="stretch" alt="" /></div>
+		<div class="atree" style="margin-left:1100px; width:113px; margin-right:749.5px;"><img src="media/tree07.png" class="stretch" alt="" /></div>
+		<div class="atree" style="margin-left:1055px; width:112px; margin-right:264.25px;"><img src="media/tree03.png" class="stretch" alt="" /></div>
+			<div class="atree" style="margin-left:968px; width:119px; margin-right:1014.25px;"><img src="media/tree02.png" class="stretch" alt="" /></div>
+		<div class="atree" style="margin-left:866px; width:114px; margin-right:982.5px;"><img src="media/tree04.png" class="stretch" alt="" /></div>
+		<div class="atree" style="margin-left:869px; width:117px; margin-right:976.5px;"><img src="media/tree05.png" class="stretch" alt="" /></div>
+		<div class="atree" style="margin-left:1092px; width:112px; margin-right:758.5px;"><img src="media/tree03.png" class="stretch" alt="" /></div>
+		<div class="atree" style="margin-left:723px; width:119px; margin-right:589.25px;"><img src="media/tree06.png" class="stretch" alt="" /></div>
+			<div class="atree" style="margin-left:1076px; width:121px; margin-right:568.75px;"><img src="media/tree02.png" class="stretch" alt="" /></div>
+		<div class="atree" style="margin-left:749px; width:122px; margin-right:420.5px;"><img src="media/tree05.png" class="stretch" alt="" /></div>
+		<div class="atree" style="margin-left:539px; width:126px; margin-right:20.75px;"><img src="media/tree05.png" class="stretch" alt="" /></div>
+	</div><div id="treep1l3l" class="screen screenlayer3">
+			<div class="atree" style="margin-left:1688px; width:194px; margin-right:4098px;"><img src="media/tree06.png" class="stretch" alt="" /></div>
+		<div class="atree" style="margin-left:4785px; width:177px; margin-right:4258px;"><img src="media/tree07.png" class="stretch" alt="" /></div>
+		<div class="atree" style="margin-left:4301px; width:189px; margin-right:720px;"><img src="media/tree04.png" class="stretch" alt="" /></div>
+			<div class="atree" style="margin-left:1339px; width:125px; margin-right:4516px;"><img src="media/tree06.png" class="stretch" alt="" /></div>
+		<div class="atree" style="margin-left:4917px; width:162px; margin-right:4141px;"><img src="media/tree02.png" class="stretch" alt="" /></div>
+		<div class="atree" style="margin-left:4580px; width:155px; margin-right:475px;"><img src="media/tree03.png" class="stretch" alt="" /></div>
+			<div class="atree" style="margin-left:1694px; width:156px; margin-right:4130px;"><img src="media/tree06.png" class="stretch" alt="" /></div>
+		<div class="atree" style="margin-left:4659px; width:195px; margin-right:4366px;"><img src="media/tree03.png" class="stretch" alt="" /></div>
+		<div class="atree" style="margin-left:4847px; width:186px; margin-right:177px;"><img src="media/tree07.png" class="stretch" alt="" /></div>
+			<div class="atree" style="margin-left:1431px; width:124px; margin-right:4425px;"><img src="media/tree06.png" class="stretch" alt="" /></div>
+		<div class="atree" style="margin-left:4248px; width:214px; margin-right:4758px;"><img src="media/tree04.png" class="stretch" alt="" /></div>
+		<div class="atree" style="margin-left:4896px; width:197px; margin-right:117px;"><img src="media/tree01.png" class="stretch" alt="" /></div>
+			<div class="atree" style="margin-left:1723px; width:219px; margin-right:4038px;"><img src="media/tree06.png" class="stretch" alt="" /></div>
+		<div class="atree" style="margin-left:4458px; width:164px; margin-right:4598px;"><img src="media/tree06.png" class="stretch" alt="" /></div>
+		<div class="atree" style="margin-left:4254px; width:163px; margin-right:793px;"><img src="media/tree02.png" class="stretch" alt="" /></div>
+			<div class="atree" style="margin-left:1227px; width:120px; margin-right:3372.5px;"><img src="media/tree05.png" class="stretch" alt="" /></div>
+		<div class="atree" style="margin-left:3402px; width:211px; margin-right:-223.5px;"><img src="media/tree07.png" class="stretch" alt="" /></div>
 	</div>
 		
 	<div id="background" class="screen">
@@ -145,20 +244,20 @@ function groveOfTrees($tree, $width, $adjustLeft, $adjustRight, $numTrees, $tree
 			<div class="columns">
 				<div id="left" class="three-column">
 					<h4>Standard</h4>
-					<p class="snug" style="margin-bottom: 10px;">- £127 - <br/>- plus £2 Charity Donation -</p>
+					<p class="snug" style="margin-bottom: 10px;">£127<br/>plus £2 Charity Donation</p>
 					<!--<p class="snug">(SOLD OUT)</p>-->
 					<p class="snug">Enjoy unlimited food drinks and entertainment!</p>
 				</div>
 				<div id="center" class="three-column">
 					<h4>Priority</h4>
-					<p class="snug" style="margin-bottom: 10px;">- £143 - <br/>- plus £2 Charity Donation -</p>
+					<p class="snug" style="margin-bottom: 10px;">£143<br/>plus £2 Charity Donation</p>
 					<!--<p class="snug">(SOLD OUT)</p>-->
 					<p class="snug">Take advantage of early entry and jump the queue! Then continue the night in style with
 					a champagne reception upon entry.</p>
 				</div>
 				<div id="right" class="three-column">
 					<h4>Dining</h4>
-					<p class="snug" style="margin-bottom: 10px;">- £164 - <br/>- plus £2 Charity Donation -</p>
+					<p class="snug" style="margin-bottom: 10px;">£164<br/>plus £2 Charity Donation</p>
 					<!--<p class="snug">(SOLD OUT)</p>-->
 					<p class="snug">Indulge in a champagne reception and enjoy a three course meal in Jesus Upper Hall!</p>
 				</div>

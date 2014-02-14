@@ -1,10 +1,4 @@
-Titles and links with new font
-Calibrate trees for smaller page/make trees permanent
-
 Renew splash animation
 Highlight logo
 
-Check cross browser compatability
-
 Highlight current page
-

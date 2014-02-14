@@ -221,4 +221,5 @@
 	$(window).resize(function() {
 		checkScreenSize();
 		pagePositionCheck();
+		updateTrees();
 	});

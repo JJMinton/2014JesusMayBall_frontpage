@@ -15,17 +15,17 @@
 		<h1 class="mobileTitle">Jesus Mayball 2014</h1>
 			<p>Tickets will be available for Jesus College students from the 21st of February at 8am, for a week before general release on the 28th of February at 9pm.</p>
 				<h4>Standard</h4>
-				<p class="snug">- £127 + £2 -</p>
+				<p class="snug">£127<br/>plus £2 Charity Donation</p>
 				<!--<p class="snug">(SOLD OUT)</p>-->
-				<p class="snug">Enjoy unlimited food drinks and entertainment!</p>
+				<p class="snug">Enjoy unlimited food, drink and entertainment!</p>
 				<h4>Priority</h4>
-				<p class="snug">- £143 + £2 -</p>
+				<p class="snug">£143<br/>plus £2 Charity Donation</p>
 				<!--<p class="snug">(SOLD OUT)</p>-->
-				<p class="snug">Take advantage of early entry and jump the queue!</p>
+				<p class="snug">Take advantage of early entry and jump the queue! Then continue the night in style with a champagne reception upon entry.</p>
 				<h4>Dining</h4>
-				<p class="snug">- £164 + £2 -</p>
+				<p class="snug">£164<br/>plus £2 Charity Donation</p>
 				<!--<p class="snug">(SOLD OUT)</p>-->
-				<p class="snug">Indulge in a champagne reception and a three course meal in Jesus Hall!</p>
+				<p class="snug">Indulge in a champagne reception and enjoy a three course meal in Jesus Upper Hall!</p>
 				<p>Book your ticket <a href="tickets">here</a>.</p>
 			<br/>
 			<p>Staffing applications can be found <a href="staff">here</a>.</p>
