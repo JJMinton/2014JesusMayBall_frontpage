@@ -32,19 +32,19 @@ header('Location: index_mobile.php');
 				<p>Tickets will be available for members of Jesus College from 8am on 21st of February 2014. Remaining tickets will be put on General Release
 				to all members of the University from 9pm on 28th February 2014.</p>
 				<h4>Standard</h4>
-				<p class="snug">- £127 + £2 Charity Donation-</p>
+				<p class="snug">- £127 - <br/>- plus £2 Charity Donation -</p>
 				<!--<p class="snug">(SOLD OUT)</p>-->
 				<p class="snug">Enjoy unlimited food, drink and entertainment!</p>
 				<h4>Priority</h4>
-				<p class="snug">- £143 + £2 Charity Donation-</p>
+				<p class="snug">- £143 - <br/>- plus £2 Charity Donation -</p>
 				<!--<p class="snug">(SOLD OUT)</p>-->
 				<p class="snug">Take advantage of early entry and jump the queue! Then continue the night in style with a champagne reception upon entry.</p>
 				<h4>Dining</h4>
-				<p class="snug">- £164 + £2 Charity Donation-</p>
+				<p class="snug">- £164 - <br/>- plus £2 Charity Donation -</p>
 				<!--<p class="snug">(SOLD OUT)</p>-->
 				<p class="snug">Indulge in a champagne reception and enjoy a three course meal in Jesus Upper Hall!</p>
 				<br/>
-				<p>Please note that the charitable donation is optional - for more information see our <a id="ticketLinkToCharity" href="">charities page</a>.</p>
+				<p>Please note that the charitable donation is optional - for more information see our charities below.</p>
 				<p>Reserve tickets now and pay via bank transfer.</p>
 			
 			<h1 class="smallTitle">Charities</h1>
@@ -52,25 +52,25 @@ header('Location: index_mobile.php');
 				each ticket purchase. This year Jesus College May Ball is supporting 
 				Jimmy's Cambridge and Afrinspire.
 
-				<a href="http://www.jimmyscambridge.org.uk" target="_blank"><h2>Jimmy's Cambridge</h2></a>
+				<a href="http://www.jimmyscambridge.org.uk" target="_blank"><h4>Jimmy's Cambridge</h4></a>
 				For more information please visit their website <a href="www.jimmyscambridge.org.uk" target="_blank">here</a>.
 
-				<a href="http://www.afrinspire.org.uk" target="_blank"><h2>Afrinspire</h2></a>
+				<a href="http://www.afrinspire.org.uk" target="_blank"><h4>Afrinspire</h4></a>
 				For more information please visit their website <a href="www.afrinspire.org.uk" target="_blank">here</a>.
 				
 			<h1 class="smallTitle">Staffing</h1>
-				<p>Jesus May Ball Committee is looking for enthusiastic, hard working students to make the 16th June a spectacular night.</p>
+				<p>Jesus May Ball Committee is looking for enthusiastic, hard working students to make the 16th June a spectacular night.</p><br/>
 				<p>Apply with a group of friends and we will try and ensure that you are put together. If you're interested, online applications for all staffing posts are now open!</p>
 				<!--<p>Hurry, the application deadline is Sunday 24th February.</p>-->
 				<!--<p>[Sorry, Applications have not yet opened. Please come back soon.]</p>
 				<p>[Sorry, Applications are now closed]</p>-->
-				<div class="header-link"><h2><a href="http://www.jesusmayball.com/staff">Apply here</a></h2></div>
+				<div class="header-link"><h4><a href="http://www.jesusmayball.com/staff">Apply here</a></h4></div>
 				
 			<h1 class="smallTitle">Enterntainment</h1>
 				<p>The ents team will be holding auditions on the 2nd and 9th of March so sign up below.</p>
 				<p>If you cannot attend any of the timetabled audition slots, you may still submit your act for consideration.</p>
 				<!--<p>[Sorry, auditions are now closed.]</p>-->
-				<div class="header-link"><h2><a href="http://www.jesusmayball.com/ents">Register for an audition here.</a></h2></div>
+				<div class="header-link"><h4><a href="http://www.jesusmayball.com/ents">Register for an audition here.</a></h4></div>
 		</div>
 	</div>	
 	
@@ -145,25 +145,24 @@ function groveOfTrees($tree, $width, $adjustLeft, $adjustRight, $numTrees, $tree
 			<div class="columns">
 				<div id="left" class="three-column">
 					<h4>Standard</h4>
-					<p class="snug">- £127 + £2 Charity Donation-</p>
+					<p class="snug" style="margin-bottom: 10px;">- £127 - <br/>- plus £2 Charity Donation -</p>
 					<!--<p class="snug">(SOLD OUT)</p>-->
 					<p class="snug">Enjoy unlimited food drinks and entertainment!</p>
 				</div>
 				<div id="center" class="three-column">
 					<h4>Priority</h4>
-					<p class="snug">- £143 + £2 Charity Donation-</p>
+					<p class="snug" style="margin-bottom: 10px;">- £143 - <br/>- plus £2 Charity Donation -</p>
 					<!--<p class="snug">(SOLD OUT)</p>-->
 					<p class="snug">Take advantage of early entry and jump the queue! Then continue the night in style with
 					a champagne reception upon entry.</p>
 				</div>
 				<div id="right" class="three-column">
 					<h4>Dining</h4>
-					<p class="snug">- £164 + £2 Charity Donation-</p>
+					<p class="snug" style="margin-bottom: 10px;">- £164 - <br/>- plus £2 Charity Donation -</p>
 					<!--<p class="snug">(SOLD OUT)</p>-->
 					<p class="snug">Indulge in a champagne reception and enjoy a three course meal in Jesus Upper Hall!</p>
 				</div>
 			</div>
-			<br/>
 			<br/>
 			<br/>
 			<p>Please note that the charitable donation is optional - for more information see our <a id="ticketLinkToCharity" href="">charities page</a>.</p>
@@ -229,50 +228,52 @@ function groveOfTrees($tree, $width, $adjustLeft, $adjustRight, $numTrees, $tree
 		
 		<div class="page" style="margin-right: 595px;">
 			<h1 class="title">2014 Committee</h1>
-			<div id="left" class="three-column">
-				<h4><a title="Email President" href="mailto:mayball-president@jesus.cam.ac.uk" >President</a></h4>
-				<p class="snug">Emma Findlay</p>
-				<p class="snug">Harriet Rudd-Jones</p>
-				<h4><a title="Email Food" href="mailto:mayball-food@jesus.cam.ac.uk" >Food</a></h4>
-				<p class="snug">Kathryn Dixon</p>
-				<h4><a title="Email Drinks" href="mailto:mayball-drink@jesus.cam.ac.uk" >Drinks</a></h4>
-				<p class="snug">Holly Newton</p>
-				<h4><a title="Email Security" href="mailto:mayball-security@jesus.cam.ac.uk" >Security</a></h4>
-				<p class="snug">Christie Bellotti</p>
-				<h4><a title="Email Buildings" href="mailto:mayball-buildings@jesus.cam.ac.uk" >Buildings</a></h4>
-				<p class="snug">Jamie McCann</p>
-				<h4><a title="Email Tech" href="mailto:mayball-technical@jesus.cam.ac.uk" >Tech</a></h4>
-				<p class="snug">George Bryan</p>
-			</div>
-			<div id="center" class="three-column">
-				<h4><a title="Email Treasurer" href="mailto:mayball-treasurer@jesus.cam.ac.uk" >Treasurer</a></h4>
-				<p class="snug">Michael Belben</p>
-				<h4><a title="Email Publicity" href="mailto:mayball-publicity@jesus.cam.ac.uk" >Publicity</a></h4>
-				<p class="snug">Ed Mellor</p>
-				<h4><a title="Email Ents" href="mailto:mayball-ents@jesus.cam.ac.uk,mayball-main-ents@jesus.cam.ac.uk" >Main Ents</a></h4>
-				<p class="snug">Guy Pearson</p>
-				<h4><a title="Email Ents" href="mailto:mayball-ents@jesus.cam.ac.uk,mayball-student-ents@jesus.cam.ac.uk" >Student Ents</a></h4>
-				<p class="snug">Joe Baxter</p>
-				<h4><a title="Email Ents" href="mailto:mayball-ents@jesus.cam.ac.uk,mayball-nonmusic-ents@jesus.cam.ac.uk" >Non-Music Ents</a></h4>
-				<p class="snug">Rachel Rees-Middleton</p>
-				<h4><a title="Email Staffing" href="mailto:mayball-staffing@jesus.cam.ac.uk" >Staffing</a></h4>
-				<p class="snug">Caroline Sharp</p>
-				<p class="snug">Grace Healy</p>
-			</div>
-			<div id="right" class="three-column">
-					<h4><a title="Email Secretary" href="mailto:mayball-secretary@jesus.cam.ac.uk" >Secretary</a></h4>
-					<p class="snug">Alessandra Bittante</p>
-					<h4><a title="Email Head of Design" href="mailto:mayball-design@jesus.cam.ac.uk" >Head of Design</a></h4>
-					<p class="snug">Rian Matanky-Becker</p>
-					<h4><a title="Email Design Team" href="mailto:mayball-designteam@jesus.cam.ac.uk" >Design Team</a></h4>
-					<p class="snug">Danielle Holmes</p>
-					<p class="snug">Jane Baxter</p>
-					<p class="snug">Amy Chen-Cooper</p>
-					<p class="snug">Freddie Hampel</p>
-					<h4><a title="Email Ticketing" href="mailto:mayball-tickets@jesus.cam.ac.uk" >Ticketing</a></h4>
-					<p class="snug">Stephen Joseph</p>
-					<h4><a title="Email Technical Ticketing and Webmaster" href="mailto:" >Webmaster</a></h4>
-					<p class="snug">Jeremy Minton</p>
+			<div class="columns">
+				<div id="left" class="three-column">
+					<h4><a title="Email President" href="mailto:mayball-president@jesus.cam.ac.uk" >President</a></h4>
+					<p class="snug">Emma Findlay</p>
+					<p class="snug">Harriet Rudd-Jones</p>
+					<h4><a title="Email Food" href="mailto:mayball-food@jesus.cam.ac.uk" >Food</a></h4>
+					<p class="snug">Kathryn Dixon</p>
+					<h4><a title="Email Drinks" href="mailto:mayball-drink@jesus.cam.ac.uk" >Drinks</a></h4>
+					<p class="snug">Holly Newton</p>
+					<h4><a title="Email Security" href="mailto:mayball-security@jesus.cam.ac.uk" >Security</a></h4>
+					<p class="snug">Christie Bellotti</p>
+					<h4><a title="Email Buildings" href="mailto:mayball-buildings@jesus.cam.ac.uk" >Buildings</a></h4>
+					<p class="snug">Jamie McCann</p>
+					<h4><a title="Email Tech" href="mailto:mayball-technical@jesus.cam.ac.uk" >Tech</a></h4>
+					<p class="snug">George Bryan</p>
+				</div>
+				<div id="center" class="three-column">
+					<h4><a title="Email Treasurer" href="mailto:mayball-treasurer@jesus.cam.ac.uk" >Treasurer</a></h4>
+					<p class="snug">Michael Belben</p>
+					<h4><a title="Email Publicity" href="mailto:mayball-publicity@jesus.cam.ac.uk" >Publicity</a></h4>
+					<p class="snug">Ed Mellor</p>
+					<h4><a title="Email Ents" href="mailto:mayball-ents@jesus.cam.ac.uk,mayball-main-ents@jesus.cam.ac.uk" >Main Ents</a></h4>
+					<p class="snug">Guy Pearson</p>
+					<h4><a title="Email Ents" href="mailto:mayball-ents@jesus.cam.ac.uk,mayball-student-ents@jesus.cam.ac.uk" >Student Ents</a></h4>
+					<p class="snug">Joe Baxter</p>
+					<h4><a title="Email Ents" href="mailto:mayball-ents@jesus.cam.ac.uk,mayball-nonmusic-ents@jesus.cam.ac.uk" >Non-Music Ents</a></h4>
+					<p class="snug">Rachel Rees-Middleton</p>
+					<h4><a title="Email Staffing" href="mailto:mayball-staffing@jesus.cam.ac.uk" >Staffing</a></h4>
+					<p class="snug">Caroline Sharp</p>
+					<p class="snug">Grace Healy</p>
+				</div>
+				<div id="right" class="three-column">
+						<h4><a title="Email Secretary" href="mailto:mayball-secretary@jesus.cam.ac.uk" >Secretary</a></h4>
+						<p class="snug">Alessandra Bittante</p>
+						<h4><a title="Email Head of Design" href="mailto:mayball-design@jesus.cam.ac.uk" >Head of Design</a></h4>
+						<p class="snug">Rian Matanky-Becker</p>
+						<h4><a title="Email Design Team" href="mailto:mayball-designteam@jesus.cam.ac.uk" >Design Team</a></h4>
+						<p class="snug">Danielle Holmes</p>
+						<p class="snug">Jane Baxter</p>
+						<p class="snug">Amy Chen-Cooper</p>
+						<p class="snug">Freddie Hampel</p>
+						<h4><a title="Email Ticketing" href="mailto:mayball-tickets@jesus.cam.ac.uk" >Ticketing</a></h4>
+						<p class="snug">Stephen Joseph</p>
+						<h4><a title="Email Technical Ticketing and Webmaster" href="mailto:" >Webmaster</a></h4>
+						<p class="snug">Jeremy Minton</p>
+				</div>
 			</div>
 		</div>
 	</div>
