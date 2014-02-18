@@ -41,10 +41,6 @@
 		}
 		//$("#pages").css('width', counter +"px");
 	}
-
-    $(function() {
-
-    });	
 	
 	//FUNCTION TO CALL ON LOAD
 	function Ready(){
@@ -117,7 +113,7 @@
 		$('body').bind('mousewheel', function(event, delta, deltaX, deltaY) {
 			if(largeScreen){
 				var scroll = parseInt( $(window).scrollLeft() );
-				$('html, body').scrollLeft( scroll - ( deltaY * 5 ) );
+				$('html, body').scrollLeft( scroll - ( deltaY * 40 ) );
 				event.preventDefault();
 			}
         });
