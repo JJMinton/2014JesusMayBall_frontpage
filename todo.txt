@@ -1,4 +1,0 @@
-Renew splash animation
-Highlight logo
-
-Highlight current page
