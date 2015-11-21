@@ -1,4 +1,0 @@
-DirectoryIndex staffAdmin.php
-
-AuthType Ucam-WebAuth
-    Require user pc410 lm493 jjm61 gh393 ccs46
