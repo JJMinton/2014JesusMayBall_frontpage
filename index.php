@@ -38,7 +38,7 @@ header('Location: index_mobile.php');
 				<a target="_blank" href="http://www.theothertribe.com"><img id="ent6" src="media/ent6.png" class="medAct" alt="Act 6" style="border:0;"/></a>
 				<a target="_blank" href="https://soundcloud.com/animalmusicuk"><img id="ent7" src="media/ent7.png" class="medAct" alt="Act 7" style="border:0;"/></a>
 				<a target="_blank" href="http://wilkinson-music.com"><img id="ent8" src="media/ent8.png" class="bigAct" alt="Wilkinson" style="border:0;"/></a>
-				<a target="_blank" href="http://scoutingforgirls.com/gb/home"><img id="ent9" src="media/ent9.png" class="bigAct" alt="Scouting for Girls" style="border:0;"/></a>
+				<a target="_blank" ><img id="ent9" src="media/ent9.png" class="bigAct" alt="The Headliner" style="border:0;"/></a>
 			</div>
 							
 			<h1 class="smallTitle">Tickets</h1>
@@ -363,7 +363,7 @@ function groveOfTrees($tree, $width, $adjustLeft, $adjustRight, $numTrees, $tree
 					<a href="http://www.coldplace.co.uk" target="_blank"><img id="ent1" src="media/ent1.png" class="smlAct" alt="Coldplace" style="border:0;"/></a>
 					</div>
 					<div class="imageContainer">
-					<a target="_blank" href="http://scoutingforgirls.com/gb/home"><img id="ent9" src="media/ent9.png" class="bigAct" alt="Scouting for Girls" style="border:0;"/></a>
+					<a target="_blank"><img id="ent9" src="media/ent9.png" class="bigAct" alt="The Headliner" style="border:0;"/></a>
 					</div>
 					<div class="imageContainer">
 					<a href="http://www.antarcticmonkeys.com/am/Home.html" target="_blank"><img id="ent2" src="media/ent2.png" class="smlAct" alt="Antarctic Monkeys" style="border:0;"/></a>

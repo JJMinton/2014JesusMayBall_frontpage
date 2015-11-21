@@ -34,7 +34,7 @@
 			<h3>Entertainment</h4>
 			<p>Ents applications can be found <a href="ents">here</a>.</p>
 			<br/><br/>
-			<p>Please visit our desktop site for more information.</p>
+			<p>Please visit our desktop site for more information and the line-up.</p>
 			<br/>
 	</div>
 </body>
