@@ -1,0 +1,21 @@
+#!/bin/bash
+if [[ $EUID -ne 0 ]]; then
+   echo "This script must be run as root" 1>&2
+   exit 1
+fi
+cp ticketsbak/config.php tickets2/includes/
+cp ticketsbak/.htaccesstickets tickets2/.htaccess
+cp ticketsbak/.htpasswd tickets2/
+cp ticketsbak/.htaccessentry tickets2/entry/.htaccess
+cp ticketsbak/.htaccessadmin tickets2/admin/.htaccess
+cp ticketsbak/college tickets2/permissions/college
+cp ticketsbak/reservation tickets2/permissions/reservation
+cp ticketsbak/database_config.php tickets2/includes/
+cp ticketsbak/index.html tickets2/
+cp ticketsbak/logo.png tickets2/res/
+cp ticketsbak/tc.pdf tickets2/
+cp ticketsbak/charities.html tickets2/res/
+mv ticketsbak/receipts/* tickets/receipts2/ -f
+chmod 775 tickets2/receipts/ tickets2/receipts/ tickets2/includes/config.php
+mv tickets/ tickets3/
+mv tickets2/ tickets/
